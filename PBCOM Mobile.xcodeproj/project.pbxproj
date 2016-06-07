@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DFFA18E71D06AD6D0035D87E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA18E61D06AD6D0035D87E /* AppDelegate.swift */; };
+		DFFA18E91D06AD6D0035D87E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA18E81D06AD6D0035D87E /* ViewController.swift */; };
+		DFFA18EC1D06AD6D0035D87E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFFA18EA1D06AD6D0035D87E /* Main.storyboard */; };
+		DFFA18EE1D06AD6D0035D87E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFFA18ED1D06AD6D0035D87E /* Assets.xcassets */; };
+		DFFA18F11D06AD6D0035D87E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFFA18EF1D06AD6D0035D87E /* LaunchScreen.storyboard */; };
+		DFFA18FC1D06AD6D0035D87E /* PBCOM_MobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA18FB1D06AD6D0035D87E /* PBCOM_MobileTests.swift */; };
+		DFFA19071D06AD6D0035D87E /* PBCOM_MobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA19061D06AD6D0035D87E /* PBCOM_MobileUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DFFA18F81D06AD6D0035D87E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFFA18DB1D06AD6D0035D87E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DFFA18E21D06AD6D0035D87E;
+			remoteInfo = "PBCOM Mobile";
+		};
+		DFFA19031D06AD6D0035D87E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFFA18DB1D06AD6D0035D87E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DFFA18E21D06AD6D0035D87E;
+			remoteInfo = "PBCOM Mobile";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DFFA18E31D06AD6D0035D87E /* PBCOM Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PBCOM Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFFA18E61D06AD6D0035D87E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DFFA18E81D06AD6D0035D87E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DFFA18EB1D06AD6D0035D87E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DFFA18ED1D06AD6D0035D87E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DFFA18F01D06AD6D0035D87E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DFFA18F21D06AD6D0035D87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFFA18F71D06AD6D0035D87E /* PBCOM MobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PBCOM MobileTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFFA18FB1D06AD6D0035D87E /* PBCOM_MobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBCOM_MobileTests.swift; sourceTree = "<group>"; };
+		DFFA18FD1D06AD6D0035D87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFFA19021D06AD6D0035D87E /* PBCOM MobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PBCOM MobileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFFA19061D06AD6D0035D87E /* PBCOM_MobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBCOM_MobileUITests.swift; sourceTree = "<group>"; };
+		DFFA19081D06AD6D0035D87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DFFA18E01D06AD6D0035D87E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFFA18F41D06AD6D0035D87E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFFA18FF1D06AD6D0035D87E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DFFA18DA1D06AD6D0035D87E = {
+			isa = PBXGroup;
+			children = (
+				DFFA18E51D06AD6D0035D87E /* PBCOM Mobile */,
+				DFFA18FA1D06AD6D0035D87E /* PBCOM MobileTests */,
+				DFFA19051D06AD6D0035D87E /* PBCOM MobileUITests */,
+				DFFA18E41D06AD6D0035D87E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DFFA18E41D06AD6D0035D87E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DFFA18E31D06AD6D0035D87E /* PBCOM Mobile.app */,
+				DFFA18F71D06AD6D0035D87E /* PBCOM MobileTests.xctest */,
+				DFFA19021D06AD6D0035D87E /* PBCOM MobileUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DFFA18E51D06AD6D0035D87E /* PBCOM Mobile */ = {
+			isa = PBXGroup;
+			children = (
+				DFFA18E61D06AD6D0035D87E /* AppDelegate.swift */,
+				DFFA18E81D06AD6D0035D87E /* ViewController.swift */,
+				DFFA18EA1D06AD6D0035D87E /* Main.storyboard */,
+				DFFA18ED1D06AD6D0035D87E /* Assets.xcassets */,
+				DFFA18EF1D06AD6D0035D87E /* LaunchScreen.storyboard */,
+				DFFA18F21D06AD6D0035D87E /* Info.plist */,
+			);
+			path = "PBCOM Mobile";
+			sourceTree = "<group>";
+		};
+		DFFA18FA1D06AD6D0035D87E /* PBCOM MobileTests */ = {
+			isa = PBXGroup;
+			children = (
+				DFFA18FB1D06AD6D0035D87E /* PBCOM_MobileTests.swift */,
+				DFFA18FD1D06AD6D0035D87E /* Info.plist */,
+			);
+			path = "PBCOM MobileTests";
+			sourceTree = "<group>";
+		};
+		DFFA19051D06AD6D0035D87E /* PBCOM MobileUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DFFA19061D06AD6D0035D87E /* PBCOM_MobileUITests.swift */,
+				DFFA19081D06AD6D0035D87E /* Info.plist */,
+			);
+			path = "PBCOM MobileUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DFFA18E21D06AD6D0035D87E /* PBCOM Mobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFFA190B1D06AD6D0035D87E /* Build configuration list for PBXNativeTarget "PBCOM Mobile" */;
+			buildPhases = (
+				DFFA18DF1D06AD6D0035D87E /* Sources */,
+				DFFA18E01D06AD6D0035D87E /* Frameworks */,
+				DFFA18E11D06AD6D0035D87E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PBCOM Mobile";
+			productName = "PBCOM Mobile";
+			productReference = DFFA18E31D06AD6D0035D87E /* PBCOM Mobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DFFA18F61D06AD6D0035D87E /* PBCOM MobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFFA190E1D06AD6D0035D87E /* Build configuration list for PBXNativeTarget "PBCOM MobileTests" */;
+			buildPhases = (
+				DFFA18F31D06AD6D0035D87E /* Sources */,
+				DFFA18F41D06AD6D0035D87E /* Frameworks */,
+				DFFA18F51D06AD6D0035D87E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DFFA18F91D06AD6D0035D87E /* PBXTargetDependency */,
+			);
+			name = "PBCOM MobileTests";
+			productName = "PBCOM MobileTests";
+			productReference = DFFA18F71D06AD6D0035D87E /* PBCOM MobileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DFFA19011D06AD6D0035D87E /* PBCOM MobileUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFFA19111D06AD6D0035D87E /* Build configuration list for PBXNativeTarget "PBCOM MobileUITests" */;
+			buildPhases = (
+				DFFA18FE1D06AD6D0035D87E /* Sources */,
+				DFFA18FF1D06AD6D0035D87E /* Frameworks */,
+				DFFA19001D06AD6D0035D87E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DFFA19041D06AD6D0035D87E /* PBXTargetDependency */,
+			);
+			name = "PBCOM MobileUITests";
+			productName = "PBCOM MobileUITests";
+			productReference = DFFA19021D06AD6D0035D87E /* PBCOM MobileUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DFFA18DB1D06AD6D0035D87E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Mark Angelo Noquera";
+				TargetAttributes = {
+					DFFA18E21D06AD6D0035D87E = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					DFFA18F61D06AD6D0035D87E = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = DFFA18E21D06AD6D0035D87E;
+					};
+					DFFA19011D06AD6D0035D87E = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = DFFA18E21D06AD6D0035D87E;
+					};
+				};
+			};
+			buildConfigurationList = DFFA18DE1D06AD6D0035D87E /* Build configuration list for PBXProject "PBCOM Mobile" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DFFA18DA1D06AD6D0035D87E;
+			productRefGroup = DFFA18E41D06AD6D0035D87E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DFFA18E21D06AD6D0035D87E /* PBCOM Mobile */,
+				DFFA18F61D06AD6D0035D87E /* PBCOM MobileTests */,
+				DFFA19011D06AD6D0035D87E /* PBCOM MobileUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DFFA18E11D06AD6D0035D87E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFFA18F11D06AD6D0035D87E /* LaunchScreen.storyboard in Resources */,
+				DFFA18EE1D06AD6D0035D87E /* Assets.xcassets in Resources */,
+				DFFA18EC1D06AD6D0035D87E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFFA18F51D06AD6D0035D87E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFFA19001D06AD6D0035D87E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DFFA18DF1D06AD6D0035D87E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFFA18E91D06AD6D0035D87E /* ViewController.swift in Sources */,
+				DFFA18E71D06AD6D0035D87E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFFA18F31D06AD6D0035D87E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFFA18FC1D06AD6D0035D87E /* PBCOM_MobileTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFFA18FE1D06AD6D0035D87E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFFA19071D06AD6D0035D87E /* PBCOM_MobileUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DFFA18F91D06AD6D0035D87E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DFFA18E21D06AD6D0035D87E /* PBCOM Mobile */;
+			targetProxy = DFFA18F81D06AD6D0035D87E /* PBXContainerItemProxy */;
+		};
+		DFFA19041D06AD6D0035D87E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DFFA18E21D06AD6D0035D87E /* PBCOM Mobile */;
+			targetProxy = DFFA19031D06AD6D0035D87E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DFFA18EA1D06AD6D0035D87E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFFA18EB1D06AD6D0035D87E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DFFA18EF1D06AD6D0035D87E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFFA18F01D06AD6D0035D87E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DFFA19091D06AD6D0035D87E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DFFA190A1D06AD6D0035D87E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DFFA190C1D06AD6D0035D87E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "PBCOM Mobile/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.exist.mnoquera.PBCOM-Mobile";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DFFA190D1D06AD6D0035D87E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "PBCOM Mobile/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.exist.mnoquera.PBCOM-Mobile";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DFFA190F1D06AD6D0035D87E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "PBCOM MobileTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.exist.mnoquera.PBCOM-MobileTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PBCOM Mobile.app/PBCOM Mobile";
+			};
+			name = Debug;
+		};
+		DFFA19101D06AD6D0035D87E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "PBCOM MobileTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.exist.mnoquera.PBCOM-MobileTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PBCOM Mobile.app/PBCOM Mobile";
+			};
+			name = Release;
+		};
+		DFFA19121D06AD6D0035D87E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "PBCOM MobileUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.exist.mnoquera.PBCOM-MobileUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "PBCOM Mobile";
+			};
+			name = Debug;
+		};
+		DFFA19131D06AD6D0035D87E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "PBCOM MobileUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.exist.mnoquera.PBCOM-MobileUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "PBCOM Mobile";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DFFA18DE1D06AD6D0035D87E /* Build configuration list for PBXProject "PBCOM Mobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFFA19091D06AD6D0035D87E /* Debug */,
+				DFFA190A1D06AD6D0035D87E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFFA190B1D06AD6D0035D87E /* Build configuration list for PBXNativeTarget "PBCOM Mobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFFA190C1D06AD6D0035D87E /* Debug */,
+				DFFA190D1D06AD6D0035D87E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DFFA190E1D06AD6D0035D87E /* Build configuration list for PBXNativeTarget "PBCOM MobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFFA190F1D06AD6D0035D87E /* Debug */,
+				DFFA19101D06AD6D0035D87E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DFFA19111D06AD6D0035D87E /* Build configuration list for PBXNativeTarget "PBCOM MobileUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFFA19121D06AD6D0035D87E /* Debug */,
+				DFFA19131D06AD6D0035D87E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DFFA18DB1D06AD6D0035D87E /* Project object */;
+}
