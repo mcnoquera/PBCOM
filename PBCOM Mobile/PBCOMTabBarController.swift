@@ -6,7 +6,7 @@
 //  Copyright © 2016 Mark Angelo Noquera. All rights reserved.
 //
 
-import Cocoa
+import UIKit
 
 class PBCOMTabBarController: UITabBarController {
 

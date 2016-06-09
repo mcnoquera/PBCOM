@@ -6,8 +6,26 @@
 //  Copyright © 2016 Mark Angelo Noquera. All rights reserved.
 //
 
-import Cocoa
+import UIKit
 
 class BaseViewController: UIViewController {
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+ 
+    func addNavigationItemTitleView() {
+        let navigationImage = UIImageView(frame: CGRectMake(0, 0, 140, 40))
+        navigationImage.image = UIImage(named: "CompanyLogo")
+        let workaroundImageView = UIImageView(frame: CGRectMake(0, 0, 140, 40))
+        workaroundImageView.addSubview(navigationImage)
+        self.navigationItem.titleView = workaroundImageView
+    }
+    
 }
