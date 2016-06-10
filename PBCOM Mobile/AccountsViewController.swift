@@ -37,7 +37,6 @@ extension AccountsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     
-    func 
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return sectionHeader[section]
