@@ -98,7 +98,7 @@ extension AccountsViewController: UITableViewDelegate, UITableViewDataSource {
         return sectionHeader.count
     }
     
-    
+
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 18))
         let label = UILabel(frame: CGRectMake(10, 5, tableView.frame.size.width, 18))
