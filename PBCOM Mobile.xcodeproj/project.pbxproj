@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2BE654421B32F45919746BF9 /* libPods-PBCOM MobileUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D57A344A1662C74EF30D186D /* libPods-PBCOM MobileUITests.a */; };
 		47ACFB8E42D7F4093F0B820E /* libPods-PBCOM MobileTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D520920D01D4CF1468602EC8 /* libPods-PBCOM MobileTests.a */; };
+		A879C0AA1D0A9A6B00478C11 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A879C0A91D0A9A6B00478C11 /* MoreTableViewController.swift */; };
 		DFFA18E71D06AD6D0035D87E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA18E61D06AD6D0035D87E /* AppDelegate.swift */; };
 		DFFA18E91D06AD6D0035D87E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA18E81D06AD6D0035D87E /* HomeViewController.swift */; };
 		DFFA18EC1D06AD6D0035D87E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFFA18EA1D06AD6D0035D87E /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		5A6DA65249809446A6B18C17 /* Pods-PBCOM Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBCOM Mobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-PBCOM Mobile/Pods-PBCOM Mobile.release.xcconfig"; sourceTree = "<group>"; };
 		850C1A5ABAFC3C115E417663 /* Pods-PBCOM MobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBCOM MobileTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PBCOM MobileTests/Pods-PBCOM MobileTests.release.xcconfig"; sourceTree = "<group>"; };
 		969BB7B2E8ED97DB75CEE2FA /* libPods-PBCOM Mobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PBCOM Mobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A879C0A91D0A9A6B00478C11 /* MoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 		AF27A2887D5C9ABD592F5D87 /* Pods-PBCOM MobileUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBCOM MobileUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PBCOM MobileUITests/Pods-PBCOM MobileUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C8653D7472E3877199E5B230 /* Pods-PBCOM Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBCOM Mobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PBCOM Mobile/Pods-PBCOM Mobile.debug.xcconfig"; sourceTree = "<group>"; };
 		D520920D01D4CF1468602EC8 /* libPods-PBCOM MobileTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PBCOM MobileTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,9 +85,9 @@
 		DFFA19281D0974150035D87E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DFFA192A1D097DC40035D87E /* PBCOMTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBCOMTabBarController.swift; sourceTree = "<group>"; };
 		DFFA192C1D0981FA0035D87E /* AccountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
-		FF3E4C2F6A421C242627BF3B /* Pods-PBCOM MobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBCOM MobileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PBCOM MobileTests/Pods-PBCOM MobileTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DFFA192E1D0A3B1A0035D87E /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		DFFA19311D0A4CCB0035D87E /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		FF3E4C2F6A421C242627BF3B /* Pods-PBCOM MobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBCOM MobileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PBCOM MobileTests/Pods-PBCOM MobileTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 		DFFA19141D06BA520035D87E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A879C0A91D0A9A6B00478C11 /* MoreTableViewController.swift */,
 				DFFA18E81D06AD6D0035D87E /* HomeViewController.swift */,
 				DFFA19151D06BA850035D87E /* ProfileViewController.swift */,
 				DFFA19171D07B4AB0035D87E /* PesoSavingsAccountViewController.swift */,
@@ -487,6 +490,7 @@
 			files = (
 				DFFA191A1D07D87A0035D87E /* TransactionViewController.swift in Sources */,
 				DFFA19221D07FC770035D87E /* TransferViewController.swift in Sources */,
+				A879C0AA1D0A9A6B00478C11 /* MoreTableViewController.swift in Sources */,
 				DFFA19161D06BA850035D87E /* ProfileViewController.swift in Sources */,
 				DFFA18E91D06AD6D0035D87E /* HomeViewController.swift in Sources */,
 				DFFA191E1D07F19F0035D87E /* PayBillsViewController.swift in Sources */,
