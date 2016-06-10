@@ -24,10 +24,10 @@ class TransactionViewController: BaseViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.translucent = false
-        self.navigationController?.navigationBar.barTintColor = UIColor(red:200/255.0, green: 47/255.0, blue: 5/255.0, alpha: 0.8)
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 244/255.0, green: 128/255.0, blue: 80/255.0, alpha: 1.0)
         self.navigationController?.navigationBar.hideBottomHairline()
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBold", size: 20)!, NSForegroundColorAttributeName: UIColor.whiteColor()]
-        self.navigationItem.title = "Transactions"
+        self.navigationItem.title = "Account Details"
         customBackButton()
     }
     
