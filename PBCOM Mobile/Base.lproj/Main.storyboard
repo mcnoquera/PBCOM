@@ -394,7 +394,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="Oul-4r-zum"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
-                                                    <color key="textColor" red="0.68377130679999998" green="0.0" blue="0.025344681389999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.94117647059999998" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="11" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXX-000-XXX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="so2-DX-24v">
@@ -404,7 +404,7 @@
                                                         <constraint firstAttribute="width" constant="544" id="c2X-7J-uHH"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="13"/>
-                                                    <color key="textColor" red="0.74835292689999999" green="0.11603104440000001" blue="0.025344681389999998" alpha="0.80381651180000002" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.94117647059999998" green="0.2666666667" blue="0.2666666667" alpha="0.68610114020270274" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="12" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lks-S2-Ihk">
@@ -523,7 +523,7 @@
                                             <constraint firstAttribute="height" constant="21" id="f0C-MT-9hY"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
-                                        <color key="textColor" red="0.43610991703157892" green="0.078561883223684209" blue="0.019536704416315789" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.43610991700000001" green="0.078561883220000003" blue="0.019536704419999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 190 134 08" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPa-28-AFE">
@@ -537,7 +537,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.78325218676842101" green="0.18590666118421054" blue="0.019536704416315789" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.95686274509803915" green="0.50196078431372548" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="nGB-eO-V26" firstAttribute="top" secondItem="MMQ-fw-dRB" secondAttribute="top" constant="22" id="9nq-va-efU"/>
                                     <constraint firstItem="u40-wO-lKR" firstAttribute="leading" secondItem="MMQ-fw-dRB" secondAttribute="leading" constant="15" id="DTJ-HC-Cta"/>
@@ -635,7 +635,7 @@
         <scene sceneID="3Gm-BL-Ak3">
             <objects>
                 <tableViewController storyboardIdentifier="MainTransactionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1xv-8r-uek" customClass="MainTransactionViewController" customModule="PBCOM_Mobile" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="185" sectionHeaderHeight="18" sectionFooterHeight="18" id="ONz-M8-tUb">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="185" sectionHeaderHeight="28" sectionFooterHeight="28" id="ONz-M8-tUb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -643,7 +643,7 @@
                             <tableViewSection id="Giq-7L-SU5">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="46" id="z0g-po-34o">
-                                        <rect key="frame" x="0.0" y="99" width="600" height="46"/>
+                                        <rect key="frame" x="0.0" y="64" width="600" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z0g-po-34o" id="1at-vo-CBH">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="46"/>
@@ -676,7 +676,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="46" id="Fs4-Cu-A8h">
-                                        <rect key="frame" x="0.0" y="145" width="600" height="46"/>
+                                        <rect key="frame" x="0.0" y="110" width="600" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fs4-Cu-A8h" id="OBk-SU-VYk">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="46"/>
@@ -709,7 +709,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="46" id="ime-uH-Ss2">
-                                        <rect key="frame" x="0.0" y="191" width="600" height="46"/>
+                                        <rect key="frame" x="0.0" y="156" width="600" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ime-uH-Ss2" id="oAe-ww-aMG">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="46"/>
@@ -2061,8 +2061,14 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="ESi-10-VkU">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.93333333333333335" green="0.12549019607843137" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.95686274510000002" green="0.50196078430000002" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="zTQ-bu-qqf" kind="relationship" relationship="viewControllers" id="Fp2-rI-cZp"/>
@@ -2270,11 +2276,11 @@
             </objects>
             <point key="canvasLocation" x="-544" y="-163"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Transactions-->
         <scene sceneID="f83-gf-J6X">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0ww-lU-o6S" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="WSo-34-tsb"/>
+                    <tabBarItem key="tabBarItem" title="Transactions" image="Account" id="WSo-34-tsb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qIU-p6-o8l">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -2289,11 +2295,11 @@
             </objects>
             <point key="canvasLocation" x="2512" y="1287"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Account-->
         <scene sceneID="FzE-25-OvO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zTQ-bu-qqf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="recents" id="62h-vZ-QOp"/>
+                    <tabBarItem key="tabBarItem" title="Account" image="Account" selectedImage="Account" id="62h-vZ-QOp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XHo-uc-hpt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -2418,6 +2424,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Account" width="85" height="85"/>
         <image name="Accounts" width="256" height="256"/>
         <image name="AccountsWhite" width="256" height="256"/>
         <image name="CompanyLogo" width="235" height="73"/>
