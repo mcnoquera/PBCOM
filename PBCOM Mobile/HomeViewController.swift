@@ -39,6 +39,8 @@ class HomeViewController: BaseViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        self.navigationController?.navigationBar.barTintColor = UIColor(red:255/255.0, green: 255/255.0, blue: 255/255.0, alpha: 1.0)
+        self.navigationController?.navigationBar.hideBottomHairline()
         self.startTimer()
     }
     

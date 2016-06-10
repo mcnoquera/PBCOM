@@ -37,7 +37,22 @@ class AccountsViewController: UIViewController {
     
     func signOutButton() {
         self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .Plain, target: self, action: #selector(AccountsViewController.dismissViewController))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .Plain, target: self, action: #selector(AccountsViewController.alertLogout))
+    }
+    
+    func alertLogout() {
+        let alertController = UIAlertController(title: "PBCOM Mobile",
+                                                message: "Are you sure you want to Logout?",
+                                                preferredStyle: .Alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        let openAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+            self.dismissViewController()
+        }
+        alertController.addAction(openAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
     
     func dismissViewController() {
@@ -165,3 +180,5 @@ extension AccountsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
 }
+
+
