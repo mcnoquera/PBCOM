@@ -19,8 +19,13 @@ class EnrolledBillersViewController: UITableViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBold", size: 20)!]
+        self.navigationController?.navigationBar.translucent = false
+        self.navigationController?.navigationBar.barTintColor = UIColor(red:200/255.0, green: 47/255.0, blue: 5/255.0, alpha: 0.8)
+        self.navigationController?.navigationBar.hideBottomHairline()
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBold", size: 20)!, NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.navigationItem.title = "Enrolled Billers"
+        customBackButton()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -28,4 +33,13 @@ class EnrolledBillersViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK: Dismiss Button
+    func customBackButton() {
+        self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "Back"), style: .Plain, target: self, action: #selector(EnrolledBillersViewController.dismissViewController))
+    }
+    
+    func dismissViewController() {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
 }

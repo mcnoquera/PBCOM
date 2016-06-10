@@ -1,38 +1,18 @@
 //
-//  PayBillsViewController.swift
+//  LocatorViewController.swift
 //  PBCOM Mobile
 //
-//  Created by Mark Angelo Noquera on 6/8/16.
+//  Created by Mark Angelo Noquera on 6/9/16.
 //  Copyright © 2016 Mark Angelo Noquera. All rights reserved.
 //
 
 import UIKit
 
-class PayBillsViewController: UITableViewController {
-
+class MainTransactionViewController: UITableViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.translucent = false
-        self.navigationController?.navigationBar.barTintColor = UIColor(red:200/255.0, green: 47/255.0, blue: 5/255.0, alpha: 0.8)
-        self.navigationController?.navigationBar.hideBottomHairline()
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBold", size: 20)!, NSForegroundColorAttributeName: UIColor.whiteColor()]
-        self.navigationItem.title = "Pay Bills"
-        customBackButton()
-    }
-    
-    //MARK: Dismiss Button
-    func customBackButton() {
-        self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "Back"), style: .Plain, target: self, action: #selector(PayBillsViewController.dismissViewController))
-    }
-    
-    func dismissViewController() {
-        self.navigationController?.popViewControllerAnimated(true)
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,15 +21,25 @@ class PayBillsViewController: UITableViewController {
     }
     
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.translucent = false
+        self.navigationController?.navigationBar.barTintColor = UIColor(red:200/255.0, green: 47/255.0, blue: 5/255.0, alpha: 0.8)
+        self.navigationController?.navigationBar.hideBottomHairline()
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBold", size: 20)!, NSForegroundColorAttributeName: UIColor.whiteColor()]
+        self.navigationItem.title = "Transactions"
+    }
+    
     //MARK: UITableViewControllerDelegate and UITableViewControllerDataSource
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.row {
         case 0:
-            let vc = storyboard?.instantiateViewControllerWithIdentifier("EnrolledBillersViewController") as! EnrolledBillersViewController
+            let vc = storyboard?.instantiateViewControllerWithIdentifier("PayBillsViewController") as! PayBillsViewController
             self.navigationController?.pushViewController(vc, animated: true)
             break
         case 1:
-            print("Index: \(indexPath.row)")
+            let vc = storyboard?.instantiateViewControllerWithIdentifier("TransferViewController") as! TransferViewController
+            self.navigationController?.pushViewController(vc, animated: true)
             break
         case 2:
             print("Index: \(indexPath.row)")
@@ -58,5 +48,7 @@ class PayBillsViewController: UITableViewController {
             break
         }
     }
+    
+    
     
 }

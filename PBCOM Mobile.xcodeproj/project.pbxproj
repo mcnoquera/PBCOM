@@ -23,10 +23,12 @@
 		DFFA191E1D07F19F0035D87E /* PayBillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA191D1D07F19F0035D87E /* PayBillsViewController.swift */; };
 		DFFA19201D07F9260035D87E /* EnrolledBillersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA191F1D07F9260035D87E /* EnrolledBillersViewController.swift */; };
 		DFFA19221D07FC770035D87E /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA19211D07FC770035D87E /* TransferViewController.swift */; };
-		DFFA19271D08FF690035D87E /* LocatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA19261D08FF690035D87E /* LocatorViewController.swift */; };
+		DFFA19271D08FF690035D87E /* MainTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA19261D08FF690035D87E /* MainTransactionViewController.swift */; };
 		DFFA19291D0974150035D87E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA19281D0974150035D87E /* LoginViewController.swift */; };
 		DFFA192B1D097DC40035D87E /* PBCOMTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA192A1D097DC40035D87E /* PBCOMTabBarController.swift */; };
 		DFFA192D1D0981FA0035D87E /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA192C1D0981FA0035D87E /* AccountsViewController.swift */; };
+		DFFA192F1D0A3B1A0035D87E /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA192E1D0A3B1A0035D87E /* Account.swift */; };
+		DFFA19321D0A4CCB0035D87E /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA19311D0A4CCB0035D87E /* Transaction.swift */; };
 		E183570E207AA564C537F655 /* libPods-PBCOM Mobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 969BB7B2E8ED97DB75CEE2FA /* libPods-PBCOM Mobile.a */; };
 /* End PBXBuildFile section */
 
@@ -77,11 +79,13 @@
 		DFFA191F1D07F9260035D87E /* EnrolledBillersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnrolledBillersViewController.swift; sourceTree = "<group>"; };
 		DFFA19211D07FC770035D87E /* TransferViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferViewController.swift; sourceTree = "<group>"; };
 		DFFA19231D0810120035D87E /* PBCOM Mobile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PBCOM Mobile-Bridging-Header.h"; sourceTree = "<group>"; };
-		DFFA19261D08FF690035D87E /* LocatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocatorViewController.swift; sourceTree = "<group>"; };
+		DFFA19261D08FF690035D87E /* MainTransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTransactionViewController.swift; sourceTree = "<group>"; };
 		DFFA19281D0974150035D87E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DFFA192A1D097DC40035D87E /* PBCOMTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBCOMTabBarController.swift; sourceTree = "<group>"; };
 		DFFA192C1D0981FA0035D87E /* AccountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
 		FF3E4C2F6A421C242627BF3B /* Pods-PBCOM MobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBCOM MobileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PBCOM MobileTests/Pods-PBCOM MobileTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DFFA192E1D0A3B1A0035D87E /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		DFFA19311D0A4CCB0035D87E /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,7 @@
 		DFFA18E51D06AD6D0035D87E /* PBCOM Mobile */ = {
 			isa = PBXGroup;
 			children = (
+				DFFA19301D0A442D0035D87E /* Model */,
 				DFFA19141D06BA520035D87E /* Controller */,
 				DFFA18E61D06AD6D0035D87E /* AppDelegate.swift */,
 				DFFA18EA1D06AD6D0035D87E /* Main.storyboard */,
@@ -195,17 +200,26 @@
 				DFFA18E81D06AD6D0035D87E /* HomeViewController.swift */,
 				DFFA19151D06BA850035D87E /* ProfileViewController.swift */,
 				DFFA19171D07B4AB0035D87E /* PesoSavingsAccountViewController.swift */,
-				DFFA19191D07D87A0035D87E /* TransactionViewController.swift */,
 				DFFA191B1D07D89F0035D87E /* BaseViewController.swift */,
 				DFFA191D1D07F19F0035D87E /* PayBillsViewController.swift */,
 				DFFA191F1D07F9260035D87E /* EnrolledBillersViewController.swift */,
 				DFFA19211D07FC770035D87E /* TransferViewController.swift */,
-				DFFA19261D08FF690035D87E /* LocatorViewController.swift */,
-				DFFA19281D0974150035D87E /* LoginViewController.swift */,
 				DFFA192A1D097DC40035D87E /* PBCOMTabBarController.swift */,
+				DFFA19281D0974150035D87E /* LoginViewController.swift */,
+				DFFA19261D08FF690035D87E /* MainTransactionViewController.swift */,
 				DFFA192C1D0981FA0035D87E /* AccountsViewController.swift */,
+				DFFA19191D07D87A0035D87E /* TransactionViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		DFFA19301D0A442D0035D87E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DFFA192E1D0A3B1A0035D87E /* Account.swift */,
+				DFFA19311D0A4CCB0035D87E /* Transaction.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -480,10 +494,12 @@
 				DFFA19181D07B4AB0035D87E /* PesoSavingsAccountViewController.swift in Sources */,
 				DFFA192B1D097DC40035D87E /* PBCOMTabBarController.swift in Sources */,
 				DFFA192D1D0981FA0035D87E /* AccountsViewController.swift in Sources */,
-				DFFA19271D08FF690035D87E /* LocatorViewController.swift in Sources */,
+				DFFA19271D08FF690035D87E /* MainTransactionViewController.swift in Sources */,
 				DFFA191C1D07D89F0035D87E /* BaseViewController.swift in Sources */,
 				DFFA19201D07F9260035D87E /* EnrolledBillersViewController.swift in Sources */,
 				DFFA19291D0974150035D87E /* LoginViewController.swift in Sources */,
+				DFFA192F1D0A3B1A0035D87E /* Account.swift in Sources */,
+				DFFA19321D0A4CCB0035D87E /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
