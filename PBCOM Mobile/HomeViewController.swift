@@ -11,8 +11,13 @@ import UIKit
 class HomeViewController: BaseViewController {
     
     @IBOutlet weak var loginButton: UIView!
+    @IBOutlet weak var loginImage: UIImageView!
+    
     @IBOutlet weak var pageControl: UIPageControl!
+    
     @IBOutlet weak var imageCarousel: iCarousel!
+    
+    
     var valid = false
     var timer: NSTimer!
     
@@ -21,10 +26,12 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        addNavigationItemTitleView()
         setUpCarousel()
         pageControl.currentPage = 0
         
+        /*
+         UI Gestures Recognize for Menu Buttons
+         */
         let loginGesture = UITapGestureRecognizer(target: self, action: #selector(HomeViewController.openLoginScreen(_:)))
         self.loginButton.addGestureRecognizer(loginGesture)
         
@@ -39,9 +46,9 @@ class HomeViewController: BaseViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        self.navigationController?.navigationBar.barTintColor = UIColor(red:255/255.0, green: 255/255.0, blue: 255/255.0, alpha: 1.0)
-        self.navigationController?.navigationBar.hideBottomHairline()
+        self.defaultNavigationTitleView(UIColor.whiteColor(), isHideNavLine: true, isTranslucent: false)
         self.startTimer()
+        
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -128,7 +135,6 @@ extension HomeViewController: iCarouselDataSource, iCarouselDelegate {
     
 }
 
-//MARK: - UITableViewDelegate & UITableViewDataSource
 
 
 
