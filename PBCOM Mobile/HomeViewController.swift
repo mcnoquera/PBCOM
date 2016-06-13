@@ -17,7 +17,6 @@ class HomeViewController: BaseViewController {
     
     @IBOutlet weak var imageCarousel: iCarousel!
     
-    
     var valid = false
     var timer: NSTimer!
     
@@ -46,6 +45,7 @@ class HomeViewController: BaseViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        loginImage.image = UIImage(named: "LoginIcon")
         self.defaultNavigationTitleView(UIColor.whiteColor(), isHideNavLine: true, isTranslucent: false)
         self.startTimer()
         
@@ -59,6 +59,7 @@ class HomeViewController: BaseViewController {
     
     //MARK: Button Actions
     func openLoginScreen(sender:UITapGestureRecognizer) {
+        loginImage.image = UIImage(named: "LoginSelectedIcon")
         let loginVC = storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
         self.presentViewController(loginVC, animated: true, completion: nil)
     }

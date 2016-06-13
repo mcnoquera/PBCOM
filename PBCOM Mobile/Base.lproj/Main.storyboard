@@ -34,22 +34,22 @@
                                 <color key="currentPageIndicatorTintColor" red="0.94117647059999998" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7v-Ag-ObV">
-                                <rect key="frame" x="0.0" y="565" width="600" height="35"/>
+                                <rect key="frame" x="0.0" y="563" width="600" height="37"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2016 PBCOM. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ou-ZD-dGa">
-                                        <rect key="frame" x="8" y="8" width="584" height="21"/>
+                                        <rect key="frame" x="8" y="10" width="584" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="jWu-cq-siC"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="GxR-L0-Ukg"/>
-                                    <constraint firstItem="5ou-ZD-dGa" firstAttribute="top" secondItem="J7v-Ag-ObV" secondAttribute="top" constant="8" id="esk-pT-Y90"/>
+                                    <constraint firstAttribute="height" constant="37" id="GxR-L0-Ukg"/>
+                                    <constraint firstItem="5ou-ZD-dGa" firstAttribute="top" secondItem="J7v-Ag-ObV" secondAttribute="top" constant="10" id="esk-pT-Y90"/>
                                     <constraint firstAttribute="trailing" secondItem="5ou-ZD-dGa" secondAttribute="trailing" constant="8" id="lnS-R6-F5p"/>
                                     <constraint firstItem="5ou-ZD-dGa" firstAttribute="leading" secondItem="J7v-Ag-ObV" secondAttribute="leading" constant="8" id="nZB-8H-Im8"/>
                                 </constraints>
