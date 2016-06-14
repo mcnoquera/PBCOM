@@ -19,7 +19,7 @@ class PayBillsViewController: BaseTableViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        customNavigationTitleView(cColor.orangeFade(), title: "Pay Bills", isHideNavLine: true, isTranslucent: false, navTextColor: UIColor.whiteColor())
+        customNavigationTitleView(cColor.redFade(), title: "Pay Bills", isHideNavLine: true, isTranslucent: false, navTextColor: UIColor.whiteColor())
         customBackButton()
     }
     

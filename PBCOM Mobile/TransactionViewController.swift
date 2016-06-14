@@ -11,7 +11,7 @@ import UIKit
 class TransactionViewController: BaseViewController {
 
     var transactions : [Transaction] = []
-    
+    @IBOutlet weak var headerView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,7 +21,8 @@ class TransactionViewController: BaseViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.customNavigationTitleView(cColor.orangeFade(), title: "Account Details", isHideNavLine: true, isTranslucent: false, navTextColor: UIColor.whiteColor())
+        self.customNavigationTitleView(cColor.redFade(), title: "Account Details", isHideNavLine: true, isTranslucent: false, navTextColor: UIColor.whiteColor())
+        self.headerView.backgroundColor = cColor.redFade()
         customBackButton()
     }
     

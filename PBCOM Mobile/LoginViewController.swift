@@ -23,6 +23,16 @@ class LoginViewController: BaseViewController {
         
         textFieldPassword.layer.borderColor = cColor.borderColortextField().CGColor
         textFieldUserID.layer.borderColor = cColor.borderColortextField().CGColor
+
+    
+        let tap = UITapGestureRecognizer.init(target: self, action: #selector(resignKeyboard))
+        self.view.addGestureRecognizer(tap)
+        
+    }
+    
+    func resignKeyboard ()  {
+        textFieldUserID.resignFirstResponder()
+        textFieldPassword.resignFirstResponder()
     }
     
     override func didReceiveMemoryWarning() {
@@ -37,6 +47,21 @@ class LoginViewController: BaseViewController {
     
     @IBAction func backToMainMenu(sender: UIButton) {
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+}
+
+
+//MARK: - UITextFieldDelegate
+extension LoginViewController: UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        textField.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
 }

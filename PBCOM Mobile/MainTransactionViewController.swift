@@ -23,7 +23,7 @@ class MainTransactionViewController: BaseTableViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        customNavigationTitleView(cColor.orangeFade(), title: "Transactions", isHideNavLine: true, isTranslucent: false, navTextColor: UIColor.whiteColor())
+        customNavigationTitleView(cColor.redFade(), title: "Transactions", isHideNavLine: true, isTranslucent: false, navTextColor: UIColor.whiteColor())
         signOutButton()
     }
     

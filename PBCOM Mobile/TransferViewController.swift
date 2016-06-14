@@ -22,7 +22,7 @@ class TransferViewController: BaseTableViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        customNavigationTitleView(cColor.orangeFade(), title: "Transfer", isHideNavLine: true, isTranslucent: false, navTextColor: UIColor.whiteColor())
+        customNavigationTitleView(cColor.redFade(), title: "Transfer", isHideNavLine: true, isTranslucent: false, navTextColor: UIColor.whiteColor())
     }
     
     

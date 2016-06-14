@@ -31,6 +31,12 @@ class BaseViewController: UIViewController {
  
     
     
+    //MARK: Bar Status Style
+    func setBarStatus(style: UIStatusBarStyle) {
+        UIApplication.sharedApplication().statusBarStyle = style
+    }
+    
+    
     //MARK: Navigation Bar
     func defaultNavigationTitleView(navBgColor: UIColor, isHideNavLine: Bool, isTranslucent: Bool) {
         /*
@@ -93,6 +99,7 @@ class BaseViewController: UIViewController {
     }
     
     func dismissViewController() {
+        self.setBarStatus(.Default)
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     

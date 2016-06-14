@@ -19,7 +19,7 @@ class EnrolledBillersViewController: BaseTableViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        customNavigationTitleView(cColor.orangeFade(), title: "Enrolled Billers", isHideNavLine: true, isTranslucent: false, navTextColor: UIColor.whiteColor())
+        customNavigationTitleView(cColor.redFade(), title: "Enrolled Billers", isHideNavLine: true, isTranslucent: false, navTextColor: UIColor.whiteColor())
         customBackButton()
         
     }

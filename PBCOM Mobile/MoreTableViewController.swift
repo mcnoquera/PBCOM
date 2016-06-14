@@ -25,7 +25,7 @@ class MoreTableViewController: BaseTableViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        customNavigationTitleView(cColor.orangeFade(), title: "More", isHideNavLine: true, isTranslucent: false, navTextColor: UIColor.whiteColor())
+        customNavigationTitleView(cColor.redFade(), title: "More", isHideNavLine: true, isTranslucent: false, navTextColor: UIColor.whiteColor())
         signOutButton()
     }
     

@@ -22,6 +22,7 @@ class AccountsViewController: BaseViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //self.automaticallyAdjustsScrollViewInsets = false
+        self.setBarStatus(.LightContent)
         
         setUpStaticSavingsandCheckingAccounts()
         setUpStaticPersonalLoanAccounts()
@@ -31,10 +32,9 @@ class AccountsViewController: BaseViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.customNavigationTitleView(cColor.orangeFade(), title: "Accounts", isHideNavLine: true, isTranslucent: false, navTextColor: UIColor.whiteColor())
+        self.customNavigationTitleView(cColor.redFade(), title: "Accounts", isHideNavLine: true, isTranslucent: false, navTextColor: UIColor.whiteColor())
         signOutButton()
     }
-    
     
     func setUpStaticSavingsandCheckingAccounts() {
         let savingsAccountOne = Account()

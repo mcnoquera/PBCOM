@@ -25,6 +25,8 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        setBarStatus(.Default)
         setUpCarousel()
         pageControl.currentPage = 0
         
@@ -35,7 +37,6 @@ class HomeViewController: BaseViewController {
         self.loginButton.addGestureRecognizer(loginGesture)
         
     }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

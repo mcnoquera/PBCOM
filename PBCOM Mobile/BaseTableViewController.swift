@@ -50,6 +50,11 @@ class BaseTableViewController: UITableViewController {
         }
     }
 
+    //MARK: Bar Status Style
+    func setBarStatus(style: UIStatusBarStyle) {
+        UIApplication.sharedApplication().statusBarStyle = style
+    }
+    
     //MARK: Logout
     func signOutButton() {
         self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
@@ -72,6 +77,7 @@ class BaseTableViewController: UITableViewController {
     }
     
     func dismissViewController() {
+        self.setBarStatus(.Default)
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
