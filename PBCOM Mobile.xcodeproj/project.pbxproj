@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		2BE654421B32F45919746BF9 /* libPods-PBCOM MobileUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D57A344A1662C74EF30D186D /* libPods-PBCOM MobileUITests.a */; };
 		47ACFB8E42D7F4093F0B820E /* libPods-PBCOM MobileTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D520920D01D4CF1468602EC8 /* libPods-PBCOM MobileTests.a */; };
+		A85829C11D0FD871003238A2 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A85829C01D0FD871003238A2 /* LocalAuthentication.framework */; };
 		A879C0AA1D0A9A6B00478C11 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A879C0A91D0A9A6B00478C11 /* MoreTableViewController.swift */; };
+		A87F39131D10F70200B1E731 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87F39121D10F70200B1E731 /* RegisterViewController.swift */; };
 		DFFA18E71D06AD6D0035D87E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA18E61D06AD6D0035D87E /* AppDelegate.swift */; };
 		DFFA18E91D06AD6D0035D87E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA18E81D06AD6D0035D87E /* HomeViewController.swift */; };
 		DFFA18EC1D06AD6D0035D87E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFFA18EA1D06AD6D0035D87E /* Main.storyboard */; };
@@ -55,7 +57,9 @@
 		5A6DA65249809446A6B18C17 /* Pods-PBCOM Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBCOM Mobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-PBCOM Mobile/Pods-PBCOM Mobile.release.xcconfig"; sourceTree = "<group>"; };
 		850C1A5ABAFC3C115E417663 /* Pods-PBCOM MobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBCOM MobileTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PBCOM MobileTests/Pods-PBCOM MobileTests.release.xcconfig"; sourceTree = "<group>"; };
 		969BB7B2E8ED97DB75CEE2FA /* libPods-PBCOM Mobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PBCOM Mobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A85829C01D0FD871003238A2 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		A879C0A91D0A9A6B00478C11 /* MoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
+		A87F39121D10F70200B1E731 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AF27A2887D5C9ABD592F5D87 /* Pods-PBCOM MobileUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBCOM MobileUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PBCOM MobileUITests/Pods-PBCOM MobileUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C8653D7472E3877199E5B230 /* Pods-PBCOM Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBCOM Mobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PBCOM Mobile/Pods-PBCOM Mobile.debug.xcconfig"; sourceTree = "<group>"; };
 		D520920D01D4CF1468602EC8 /* libPods-PBCOM MobileTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PBCOM MobileTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A85829C11D0FD871003238A2 /* LocalAuthentication.framework in Frameworks */,
 				E183570E207AA564C537F655 /* libPods-PBCOM Mobile.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +126,7 @@
 		4C636ECAFC0EA7265F924897 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A85829C01D0FD871003238A2 /* LocalAuthentication.framework */,
 				969BB7B2E8ED97DB75CEE2FA /* libPods-PBCOM Mobile.a */,
 				D520920D01D4CF1468602EC8 /* libPods-PBCOM MobileTests.a */,
 				D57A344A1662C74EF30D186D /* libPods-PBCOM MobileUITests.a */,
@@ -170,6 +176,7 @@
 				DFFA19141D06BA520035D87E /* Controller */,
 				DFFA18E61D06AD6D0035D87E /* AppDelegate.swift */,
 				DFFA18EA1D06AD6D0035D87E /* Main.storyboard */,
+				A87F39121D10F70200B1E731 /* RegisterViewController.swift */,
 				DFFA18ED1D06AD6D0035D87E /* Assets.xcassets */,
 				DFFA18EF1D06AD6D0035D87E /* LaunchScreen.storyboard */,
 				DFFA18F21D06AD6D0035D87E /* Info.plist */,
@@ -501,6 +508,7 @@
 				DFFA19271D08FF690035D87E /* MainTransactionViewController.swift in Sources */,
 				DFFA191C1D07D89F0035D87E /* BaseViewController.swift in Sources */,
 				DFFA19201D07F9260035D87E /* EnrolledBillersViewController.swift in Sources */,
+				A87F39131D10F70200B1E731 /* RegisterViewController.swift in Sources */,
 				DFFA19291D0974150035D87E /* LoginViewController.swift in Sources */,
 				DFFA192F1D0A3B1A0035D87E /* Account.swift in Sources */,
 				DFFA19321D0A4CCB0035D87E /* Transaction.swift in Sources */,
@@ -652,12 +660,14 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "PBCOM Mobile/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.exist.mnoquera.PBCOM-Mobile";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PBCOM Mobile/PBCOM Mobile-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -670,11 +680,13 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "PBCOM Mobile/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.exist.mnoquera.PBCOM-Mobile";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PBCOM Mobile/PBCOM Mobile-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
