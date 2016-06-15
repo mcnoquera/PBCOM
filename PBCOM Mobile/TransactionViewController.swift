@@ -76,8 +76,6 @@ class TransactionViewController: BaseViewController {
 
 //MARK: - UITableViewDelegate & UITableViewDataSource
 extension TransactionViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -87,13 +85,12 @@ extension TransactionViewController: UITableViewDelegate, UITableViewDataSource 
         let view = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 18))
         let label = UILabel(frame: CGRectMake(10, 5, tableView.frame.size.width, 18))
         label.textColor = UIColor.blackColor()
-        label.font = UIFont(name: "HelveticaNeue-CondensedBold", size: 14)
+        label.font = UIFont(name: FONT.helveticaNeueCondensedBold.rawValue, size: 14)
         label.text =  "Transaction History"
         view.addSubview(label)
-        view.backgroundColor = UIColor(red: 239/255.0, green: 239/255.0, blue: 244/255.0, alpha: 1.0)
+        view.backgroundColor = cColor.headerTableCellColor()
         return view
     }
-    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return transactions.count
@@ -112,34 +109,4 @@ extension TransactionViewController: UITableViewDelegate, UITableViewDataSource 
         
         return cell
     }
-}
-
-
-extension UINavigationBar {
-    
-    func hideBottomHairline() {
-        let navigationBarImageView = hairlineImageViewInNavigationBar(self)
-        navigationBarImageView!.hidden = true
-    }
-    
-    func showBottomHairline() {
-        let navigationBarImageView = hairlineImageViewInNavigationBar(self)
-        navigationBarImageView!.hidden = false
-    }
-    
-    private func hairlineImageViewInNavigationBar(view: UIView) -> UIImageView? {
-        if view.isKindOfClass(UIImageView) && view.bounds.height <= 1.0 {
-            return (view as! UIImageView)
-        }
-        
-        let subviews = (view.subviews as [UIView])
-        for subview: UIView in subviews {
-            if let imageView: UIImageView = hairlineImageViewInNavigationBar(subview) {
-                return imageView
-            }
-        }
-        
-        return nil
-    }
-    
 }

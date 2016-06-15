@@ -23,7 +23,6 @@ class AccountsViewController: BaseViewController {
         // Do any additional setup after loading the view, typically from a nib.
         //self.automaticallyAdjustsScrollViewInsets = false
         self.setBarStatus(.LightContent)
-        
         setUpStaticSavingsandCheckingAccounts()
         setUpStaticPersonalLoanAccounts()
         setUpStaticCreditCardAccounts()
@@ -32,9 +31,10 @@ class AccountsViewController: BaseViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.customNavigationTitleView(cColor.redFade(), title: "Accounts", isHideNavLine: true, isTranslucent: false, navTextColor: UIColor.whiteColor())
+        customNavigationTitleView(cColor.redFade(), title: "Accounts", isHideNavLine: true, isTranslucent: false, navTextColor: UIColor.whiteColor())
         signOutButton()
     }
+    
     
     func setUpStaticSavingsandCheckingAccounts() {
         let savingsAccountOne = Account()
@@ -152,10 +152,23 @@ extension AccountsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let tvc = storyboard?.instantiateViewControllerWithIdentifier("TransactionViewController") as! TransactionViewController
-        self.navigationController?.pushViewController(tvc, animated: true)
+        let vc = storyboard?.instantiateViewControllerWithIdentifier("TransactionViewController") as! TransactionViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
-    
 }
 
+//MARK: - SlideNavigationControllerDelegate
+extension AccountsViewController: SlideNavigationControllerDelegate {
+    func slideNavigationControllerShouldDisplayLeftMenu() -> Bool {
+        return true
+    }
+    
+    func setUpMenuSlideView() {
+        SlideNavigationController.sharedInstance().panGestureSideOffset        = 50
+        SlideNavigationController.sharedInstance().enableShadow                = true
+        SlideNavigationController.sharedInstance().portraitSlideOffset         = 60
+        SlideNavigationController.sharedInstance().landscapeSlideOffset        = 60
+        SlideNavigationController.sharedInstance().menuRevealAnimationDuration = 0.19
+    }
+}
 

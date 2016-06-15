@@ -24,6 +24,8 @@ class LoginViewController: BaseViewController {
         textFieldPassword.layer.borderColor = cColor.borderColortextField().CGColor
         textFieldUserID.layer.borderColor = cColor.borderColortextField().CGColor
 
+        self.customTextFieldDelegate(textFieldUserID)
+        self.customTextFieldDelegate(textFieldPassword)
     
         let tap = UITapGestureRecognizer.init(target: self, action: #selector(resignKeyboard))
         self.view.addGestureRecognizer(tap)
@@ -41,8 +43,7 @@ class LoginViewController: BaseViewController {
     }
     
     @IBAction func loginAction(sender: AnyObject) {
-        let tabBar = storyboard?.instantiateViewControllerWithIdentifier("PBCOMTabBarController") as! PBCOMTabBarController
-        self.presentViewController(tabBar, animated: true, completion: nil)
+        
     }
     
     @IBAction func backToMainMenu(sender: UIButton) {
@@ -51,17 +52,3 @@ class LoginViewController: BaseViewController {
     
 }
 
-
-//MARK: - UITextFieldDelegate
-extension LoginViewController: UITextFieldDelegate {
-    
-    func textFieldDidEndEditing(textField: UITextField) {
-        textField.resignFirstResponder()
-    }
-    
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
-}

@@ -26,5 +26,8 @@ class CustomColor: NSObject {
     func borderColortextField() -> UIColor {
         return UIColor(red: 233/255.0, green: 233/255.0, blue: 233/255.0, alpha: 1)
     }
-    
+ 
+    func headerTableCellColor() -> UIColor {
+        return UIColor(red: 239/255.0, green: 239/255.0, blue: 244/255.0, alpha: 1.0)
+    }
 }

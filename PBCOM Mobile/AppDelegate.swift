@@ -17,6 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let menuView: MenuViewController  = mainStoryboard.instantiateViewControllerWithIdentifier("MenuViewController") as! MenuViewController
+        
+        SlideNavigationController.sharedInstance().leftMenu = menuView
+        SlideNavigationController.sharedInstance().menuRevealAnimationDuration = 0.18
+        
         return true
     }
 

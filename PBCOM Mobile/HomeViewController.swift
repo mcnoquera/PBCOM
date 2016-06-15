@@ -25,7 +25,6 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
         setBarStatus(.Default)
         setUpCarousel()
         pageControl.currentPage = 0
@@ -133,8 +132,7 @@ extension HomeViewController: iCarouselDataSource, iCarouselDelegate {
             return value * 1.1
         }
         return value
-    }
-    
+    }    
 }
 
 
