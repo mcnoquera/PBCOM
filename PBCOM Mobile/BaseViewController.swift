@@ -12,6 +12,11 @@ let PBCOM_LOGO  = "CompanyLogo"
 let BACK_ICO    = "Back"
 
 
+enum NOTICATION_CENTER: String {
+    case DismissHomeScreen = "DismissHomeScreen"
+}
+
+
 enum FONT: String {
     case helveticaNeueCondensedBold = "HelveticaNeue-CondensedBold"
 }

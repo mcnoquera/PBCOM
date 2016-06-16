@@ -43,7 +43,8 @@ class LoginViewController: BaseViewController {
     }
     
     @IBAction func loginAction(sender: AnyObject) {
-        
+        self.dismissViewControllerAnimated(true, completion: nil)
+        NSNotificationCenter.defaultCenter().postNotificationName(NOTICATION_CENTER.DismissHomeScreen.rawValue, object: nil)
     }
     
     @IBAction func backToMainMenu(sender: UIButton) {

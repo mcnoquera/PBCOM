@@ -29,6 +29,23 @@ class HomeViewController: BaseViewController {
         setUpCarousel()
         pageControl.currentPage = 0
         
+        switch UIDevice().screenType! {
+        case UIDevice.ScreenType.iPhone4:
+            imageCarousel.frame = CGRectMake(0, 0, self.view.frame.width, 213)
+        case UIDevice.ScreenType.iPhone5:
+            imageCarousel.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
+        case UIDevice.ScreenType.iPhone6:
+            imageCarousel.frame = CGRectMake(0, 0, self.view.frame.width, 250)
+        case UIDevice.ScreenType.iPhone6Plus:
+            imageCarousel.frame = CGRectMake(0, 0, self.view.frame.width, 280)
+        default:
+            imageCarousel.frame = CGRectMake(0, 0, self.view.frame.width, 250)
+        }
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.dismissHomeScreen), name: NOTICATION_CENTER.DismissHomeScreen.rawValue , object: nil)
+        
+        print("#####: \(imageCarousel.frame.height)")
+        
         /*
          UI Gestures Recognize for Menu Buttons
          */
@@ -37,6 +54,14 @@ class HomeViewController: BaseViewController {
         
     }
 
+    func dismissHomeScreen() {
+        setBarStatus(.LightContent)
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -45,7 +70,7 @@ class HomeViewController: BaseViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        loginImage.image = UIImage(named: "LoginIcon")
+        //loginImage.image = UIImage(named: "LoginIcon")
         self.defaultNavigationTitleView(UIColor.whiteColor(), isHideNavLine: true, isTranslucent: false)
         self.startTimer()
         
@@ -59,7 +84,7 @@ class HomeViewController: BaseViewController {
     
     //MARK: Button Actions
     func openLoginScreen(sender:UITapGestureRecognizer) {
-        loginImage.image = UIImage(named: "LoginSelectedIcon")
+        //loginImage.image = UIImage(named: "LoginSelectedIcon")
         let loginVC = storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
         self.presentViewController(loginVC, animated: true, completion: nil)
     }
@@ -120,11 +145,26 @@ extension HomeViewController: iCarouselDataSource, iCarouselDelegate {
     }
     
     @objc func carousel(carousel: iCarousel, viewForItemAtIndex index: Int, reusingView view: UIView?) -> UIView {
-        let carouselView    = UIView(frame: CGRectMake(0, 0, imageCarousel.frame.width, imageCarousel.frame.height))
-        let imageView       = UIImageView(frame: carouselView.frame)
+        
+        var contentView = UIView(frame: carousel.frame)
+        
+        switch UIDevice().screenType! {
+        case UIDevice.ScreenType.iPhone4:
+            contentView = NSBundle.mainBundle().loadNibNamed("CustomTemplate", owner: self, options: nil)[0] as! UIView
+        case UIDevice.ScreenType.iPhone5:
+            contentView = NSBundle.mainBundle().loadNibNamed("CustomTemplate", owner: self, options: nil)[0] as! UIView
+        case UIDevice.ScreenType.iPhone6:
+            contentView = NSBundle.mainBundle().loadNibNamed("CustomTemplate", owner: self, options: nil)[1] as! UIView
+        case UIDevice.ScreenType.iPhone6Plus:
+            contentView = NSBundle.mainBundle().loadNibNamed("CustomTemplate", owner: self, options: nil)[2] as! UIView
+            contentView.frame = CGRectMake(0, 0, carousel.frame.width, 280)
+        default:
+           contentView = NSBundle.mainBundle().loadNibNamed("CustomTemplate", owner: self, options: nil)[1] as! UIView
+        }
+        
+        let imageView       = contentView.viewWithTag(10) as! UIImageView
         imageView.image = UIImage(named: imagesArray[index])
-        carouselView.addSubview(imageView)
-        return carouselView
+        return contentView
     }
     
     func carousel(carousel: iCarousel, valueForOption option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {
@@ -134,6 +174,8 @@ extension HomeViewController: iCarouselDataSource, iCarouselDelegate {
         return value
     }    
 }
+
+
 
 
 

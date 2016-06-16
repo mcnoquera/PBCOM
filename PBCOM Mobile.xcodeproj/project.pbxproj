@@ -12,6 +12,7 @@
 		A879C0AA1D0A9A6B00478C11 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A879C0A91D0A9A6B00478C11 /* MoreTableViewController.swift */; };
 		DF48149B1D1104340054189C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF48149A1D1104340054189C /* MenuViewController.swift */; };
 		DF48149F1D11486F0054189C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF48149E1D11486F0054189C /* Extension.swift */; };
+		DF4814A11D122EA80054189C /* CustomTemplate.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF4814A01D122EA80054189C /* CustomTemplate.xib */; };
 		DFFA18E71D06AD6D0035D87E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA18E61D06AD6D0035D87E /* AppDelegate.swift */; };
 		DFFA18E91D06AD6D0035D87E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA18E81D06AD6D0035D87E /* HomeViewController.swift */; };
 		DFFA18EC1D06AD6D0035D87E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFFA18EA1D06AD6D0035D87E /* Main.storyboard */; };
@@ -66,6 +67,7 @@
 		D57A344A1662C74EF30D186D /* libPods-PBCOM MobileUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PBCOM MobileUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF48149A1D1104340054189C /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		DF48149E1D11486F0054189C /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		DF4814A01D122EA80054189C /* CustomTemplate.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTemplate.xib; sourceTree = "<group>"; };
 		DFFA18E31D06AD6D0035D87E /* PBCOM Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PBCOM Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFFA18E61D06AD6D0035D87E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFFA18E81D06AD6D0035D87E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				DFFA193D1D0FD9750035D87E /* CustomPicker.xib */,
+				DF4814A01D122EA80054189C /* CustomTemplate.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFFA18F11D06AD6D0035D87E /* LaunchScreen.storyboard in Resources */,
+				DF4814A11D122EA80054189C /* CustomTemplate.xib in Resources */,
 				DFFA18EE1D06AD6D0035D87E /* Assets.xcassets in Resources */,
 				DFFA193E1D0FD9750035D87E /* CustomPicker.xib in Resources */,
 				DFFA18EC1D06AD6D0035D87E /* Main.storyboard in Resources */,

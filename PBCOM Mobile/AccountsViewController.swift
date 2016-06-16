@@ -35,6 +35,10 @@ class AccountsViewController: BaseViewController {
         signOutButton()
     }
     
+    func autoLogout() {
+        dismissViewController()
+    }
+    
     
     func setUpStaticSavingsandCheckingAccounts() {
         let savingsAccountOne = Account()

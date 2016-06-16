@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="j9V-YR-J09">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="213"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StaticBanner" translatesAutoresizingMaskIntoConstraints="NO" id="XDq-BM-txR">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="213"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="XDq-BM-txR" secondAttribute="bottom" id="IQt-cc-Q4B"/>
+                <constraint firstItem="XDq-BM-txR" firstAttribute="leading" secondItem="j9V-YR-J09" secondAttribute="leading" id="anA-Y2-IZa"/>
+                <constraint firstAttribute="trailing" secondItem="XDq-BM-txR" secondAttribute="trailing" id="lnW-VV-hJQ"/>
+                <constraint firstItem="XDq-BM-txR" firstAttribute="top" secondItem="j9V-YR-J09" secondAttribute="top" id="uzf-V3-Ook"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="194" y="103.5"/>
+        </view>
+        <view contentMode="scaleToFill" id="NMG-N7-Fqy">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StaticBanner" translatesAutoresizingMaskIntoConstraints="NO" id="Pkz-qM-vk8">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Pkz-qM-vk8" firstAttribute="top" secondItem="NMG-N7-Fqy" secondAttribute="top" id="4UV-0h-VBL"/>
+                <constraint firstItem="Pkz-qM-vk8" firstAttribute="leading" secondItem="NMG-N7-Fqy" secondAttribute="leading" id="WNh-oJ-ocs"/>
+                <constraint firstAttribute="bottom" secondItem="Pkz-qM-vk8" secondAttribute="bottom" id="jAM-kU-C9U"/>
+                <constraint firstAttribute="trailing" secondItem="Pkz-qM-vk8" secondAttribute="trailing" id="syu-v9-sWV"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="221.5" y="384"/>
+        </view>
+        <view contentMode="scaleToFill" id="pEy-2S-Mjo">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="280"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StaticBanner" translatesAutoresizingMaskIntoConstraints="NO" id="81F-Rf-6I5">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="280"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="280" id="RWo-1p-p7h"/>
+                        <constraint firstAttribute="width" constant="414" id="uOW-Ma-YnR"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="81F-Rf-6I5" secondAttribute="trailing" id="4Jc-Qb-t3s"/>
+                <constraint firstItem="81F-Rf-6I5" firstAttribute="leading" secondItem="pEy-2S-Mjo" secondAttribute="leading" id="5qE-XE-2yk"/>
+                <constraint firstItem="81F-Rf-6I5" firstAttribute="top" secondItem="pEy-2S-Mjo" secondAttribute="top" id="CN4-qh-Up7"/>
+                <constraint firstItem="81F-Rf-6I5" firstAttribute="leading" secondItem="pEy-2S-Mjo" secondAttribute="leading" id="URC-PS-yxf"/>
+                <constraint firstAttribute="trailing" secondItem="81F-Rf-6I5" secondAttribute="trailing" id="eet-Wa-bL9"/>
+                <constraint firstItem="81F-Rf-6I5" firstAttribute="top" secondItem="pEy-2S-Mjo" secondAttribute="top" id="hJ2-pj-9EP"/>
+                <constraint firstAttribute="bottom" secondItem="81F-Rf-6I5" secondAttribute="bottom" id="sVR-rx-FOB"/>
+                <constraint firstAttribute="bottom" secondItem="81F-Rf-6I5" secondAttribute="bottom" id="wzr-TX-hS2"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="241" y="699"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="StaticBanner" width="640" height="456"/>
+    </resources>
+</document>
