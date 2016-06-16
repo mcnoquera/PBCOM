@@ -13,6 +13,8 @@
 		DF48149B1D1104340054189C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF48149A1D1104340054189C /* MenuViewController.swift */; };
 		DF48149F1D11486F0054189C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF48149E1D11486F0054189C /* Extension.swift */; };
 		DF4814A11D122EA80054189C /* CustomTemplate.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF4814A01D122EA80054189C /* CustomTemplate.xib */; };
+		DF4814A41D1281ED0054189C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4814A31D1281ED0054189C /* NetworkService.swift */; };
+		DF4814A61D1284B80054189C /* SecurityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4814A51D1284B80054189C /* SecurityService.swift */; };
 		DFFA18E71D06AD6D0035D87E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA18E61D06AD6D0035D87E /* AppDelegate.swift */; };
 		DFFA18E91D06AD6D0035D87E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA18E81D06AD6D0035D87E /* HomeViewController.swift */; };
 		DFFA18EC1D06AD6D0035D87E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFFA18EA1D06AD6D0035D87E /* Main.storyboard */; };
@@ -68,6 +70,8 @@
 		DF48149A1D1104340054189C /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		DF48149E1D11486F0054189C /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		DF4814A01D122EA80054189C /* CustomTemplate.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTemplate.xib; sourceTree = "<group>"; };
+		DF4814A31D1281ED0054189C /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		DF4814A51D1284B80054189C /* SecurityService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityService.swift; sourceTree = "<group>"; };
 		DFFA18E31D06AD6D0035D87E /* PBCOM Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PBCOM Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFFA18E61D06AD6D0035D87E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFFA18E81D06AD6D0035D87E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +157,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DF4814A21D1281820054189C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DF4814A31D1281ED0054189C /* NetworkService.swift */,
+				DF4814A51D1284B80054189C /* SecurityService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
 		DFFA18DA1D06AD6D0035D87E = {
 			isa = PBXGroup;
 			children = (
@@ -178,16 +191,11 @@
 		DFFA18E51D06AD6D0035D87E /* PBCOM Mobile */ = {
 			isa = PBXGroup;
 			children = (
-				DFFA193C1D0FD92F0035D87E /* View */,
 				DFFA19301D0A442D0035D87E /* Model */,
+				DFFA193C1D0FD92F0035D87E /* View */,
 				DFFA19141D06BA520035D87E /* Controller */,
+				DF4814A21D1281820054189C /* Service */,
 				DFFA19331D0E48700035D87E /* Utils */,
-				DFFA18E61D06AD6D0035D87E /* AppDelegate.swift */,
-				DFFA18EA1D06AD6D0035D87E /* Main.storyboard */,
-				DFFA18ED1D06AD6D0035D87E /* Assets.xcassets */,
-				DFFA18EF1D06AD6D0035D87E /* LaunchScreen.storyboard */,
-				DFFA18F21D06AD6D0035D87E /* Info.plist */,
-				DFFA19231D0810120035D87E /* PBCOM Mobile-Bridging-Header.h */,
 			);
 			path = "PBCOM Mobile";
 			sourceTree = "<group>";
@@ -242,6 +250,10 @@
 		DFFA19331D0E48700035D87E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				DFFA18ED1D06AD6D0035D87E /* Assets.xcassets */,
+				DFFA18F21D06AD6D0035D87E /* Info.plist */,
+				DFFA19231D0810120035D87E /* PBCOM Mobile-Bridging-Header.h */,
+				DFFA18E61D06AD6D0035D87E /* AppDelegate.swift */,
 				DFFA19341D0E48D20035D87E /* CustomColor.swift */,
 				DF48149E1D11486F0054189C /* Extension.swift */,
 			);
@@ -251,6 +263,8 @@
 		DFFA193C1D0FD92F0035D87E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DFFA18EA1D06AD6D0035D87E /* Main.storyboard */,
+				DFFA18EF1D06AD6D0035D87E /* LaunchScreen.storyboard */,
 				DFFA193D1D0FD9750035D87E /* CustomPicker.xib */,
 				DF4814A01D122EA80054189C /* CustomTemplate.xib */,
 			);
@@ -540,6 +554,7 @@
 			files = (
 				DFFA19371D0E4EF90035D87E /* BaseTableViewController.swift in Sources */,
 				DFFA191A1D07D87A0035D87E /* TransactionViewController.swift in Sources */,
+				DF4814A41D1281ED0054189C /* NetworkService.swift in Sources */,
 				DFFA19221D07FC770035D87E /* TransferViewController.swift in Sources */,
 				DFFA19351D0E48D20035D87E /* CustomColor.swift in Sources */,
 				A879C0AA1D0A9A6B00478C11 /* MoreTableViewController.swift in Sources */,
@@ -550,6 +565,7 @@
 				DF48149F1D11486F0054189C /* Extension.swift in Sources */,
 				DFFA192D1D0981FA0035D87E /* AccountsViewController.swift in Sources */,
 				DFFA19271D08FF690035D87E /* MainTransactionViewController.swift in Sources */,
+				DF4814A61D1284B80054189C /* SecurityService.swift in Sources */,
 				DF48149B1D1104340054189C /* MenuViewController.swift in Sources */,
 				DFFA191C1D07D89F0035D87E /* BaseViewController.swift in Sources */,
 				DFFA19201D07F9260035D87E /* EnrolledBillersViewController.swift in Sources */,

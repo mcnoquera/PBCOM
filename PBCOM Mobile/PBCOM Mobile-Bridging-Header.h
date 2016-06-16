@@ -8,3 +8,6 @@
 #import <iOS-Slide-Menu/SlideNavigationContorllerAnimatorSlide.h>
 #import <iOS-Slide-Menu/SlideNavigationContorllerAnimatorScaleAndFade.h>
 #import <iOS-Slide-Menu/SlideNavigationContorllerAnimatorSlideAndFade.h>
+#import <GZIP/GZIP.h>
+#import <JGProgressHUD/JGProgressHUD.h>
+#import <AFNetworking/AFNetworking.h>
