@@ -30,6 +30,4 @@ class NetworkService: NSObject {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = bool
     }
     
-    
-
 }

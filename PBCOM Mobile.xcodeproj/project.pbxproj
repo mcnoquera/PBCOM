@@ -10,7 +10,6 @@
 		2BE654421B32F45919746BF9 /* libPods-PBCOM MobileUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D57A344A1662C74EF30D186D /* libPods-PBCOM MobileUITests.a */; };
 		47ACFB8E42D7F4093F0B820E /* libPods-PBCOM MobileTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D520920D01D4CF1468602EC8 /* libPods-PBCOM MobileTests.a */; };
 		A879C0AA1D0A9A6B00478C11 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A879C0A91D0A9A6B00478C11 /* MoreTableViewController.swift */; };
-		DF48149B1D1104340054189C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF48149A1D1104340054189C /* MenuViewController.swift */; };
 		DF48149F1D11486F0054189C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF48149E1D11486F0054189C /* Extension.swift */; };
 		DF4814A11D122EA80054189C /* CustomTemplate.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF4814A01D122EA80054189C /* CustomTemplate.xib */; };
 		DF4814A41D1281ED0054189C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4814A31D1281ED0054189C /* NetworkService.swift */; };
@@ -24,10 +23,8 @@
 		DFFA19071D06AD6D0035D87E /* PBCOM_MobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA19061D06AD6D0035D87E /* PBCOM_MobileUITests.swift */; };
 		DFFA191A1D07D87A0035D87E /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA19191D07D87A0035D87E /* TransactionViewController.swift */; };
 		DFFA191C1D07D89F0035D87E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA191B1D07D89F0035D87E /* BaseViewController.swift */; };
-		DFFA191E1D07F19F0035D87E /* PayBillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA191D1D07F19F0035D87E /* PayBillsViewController.swift */; };
-		DFFA19201D07F9260035D87E /* EnrolledBillersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA191F1D07F9260035D87E /* EnrolledBillersViewController.swift */; };
+		DFFA19201D07F9260035D87E /* PaybillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA191F1D07F9260035D87E /* PaybillsViewController.swift */; };
 		DFFA19221D07FC770035D87E /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA19211D07FC770035D87E /* TransferViewController.swift */; };
-		DFFA19271D08FF690035D87E /* MainTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA19261D08FF690035D87E /* MainTransactionViewController.swift */; };
 		DFFA19291D0974150035D87E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA19281D0974150035D87E /* LoginViewController.swift */; };
 		DFFA192B1D097DC40035D87E /* PBCOMTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA192A1D097DC40035D87E /* PBCOMTabBarController.swift */; };
 		DFFA192D1D0981FA0035D87E /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA192C1D0981FA0035D87E /* AccountsViewController.swift */; };
@@ -67,7 +64,6 @@
 		C8653D7472E3877199E5B230 /* Pods-PBCOM Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBCOM Mobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PBCOM Mobile/Pods-PBCOM Mobile.debug.xcconfig"; sourceTree = "<group>"; };
 		D520920D01D4CF1468602EC8 /* libPods-PBCOM MobileTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PBCOM MobileTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D57A344A1662C74EF30D186D /* libPods-PBCOM MobileUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PBCOM MobileUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF48149A1D1104340054189C /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		DF48149E1D11486F0054189C /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		DF4814A01D122EA80054189C /* CustomTemplate.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTemplate.xib; sourceTree = "<group>"; };
 		DF4814A31D1281ED0054189C /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -87,11 +83,9 @@
 		DFFA19081D06AD6D0035D87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFFA19191D07D87A0035D87E /* TransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		DFFA191B1D07D89F0035D87E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		DFFA191D1D07F19F0035D87E /* PayBillsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayBillsViewController.swift; sourceTree = "<group>"; };
-		DFFA191F1D07F9260035D87E /* EnrolledBillersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnrolledBillersViewController.swift; sourceTree = "<group>"; };
+		DFFA191F1D07F9260035D87E /* PaybillsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaybillsViewController.swift; sourceTree = "<group>"; };
 		DFFA19211D07FC770035D87E /* TransferViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferViewController.swift; sourceTree = "<group>"; };
 		DFFA19231D0810120035D87E /* PBCOM Mobile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PBCOM Mobile-Bridging-Header.h"; sourceTree = "<group>"; };
-		DFFA19261D08FF690035D87E /* MainTransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTransactionViewController.swift; sourceTree = "<group>"; };
 		DFFA19281D0974150035D87E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DFFA192A1D097DC40035D87E /* PBCOMTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBCOMTabBarController.swift; sourceTree = "<group>"; };
 		DFFA192C1D0981FA0035D87E /* AccountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
@@ -228,12 +222,9 @@
 				DFFA19281D0974150035D87E /* LoginViewController.swift */,
 				DFFA192C1D0981FA0035D87E /* AccountsViewController.swift */,
 				DFFA19191D07D87A0035D87E /* TransactionViewController.swift */,
-				DFFA19261D08FF690035D87E /* MainTransactionViewController.swift */,
 				A879C0A91D0A9A6B00478C11 /* MoreTableViewController.swift */,
-				DFFA191D1D07F19F0035D87E /* PayBillsViewController.swift */,
-				DFFA191F1D07F9260035D87E /* EnrolledBillersViewController.swift */,
+				DFFA191F1D07F9260035D87E /* PaybillsViewController.swift */,
 				DFFA19211D07FC770035D87E /* TransferViewController.swift */,
-				DF48149A1D1104340054189C /* MenuViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -559,16 +550,13 @@
 				DFFA19351D0E48D20035D87E /* CustomColor.swift in Sources */,
 				A879C0AA1D0A9A6B00478C11 /* MoreTableViewController.swift in Sources */,
 				DFFA18E91D06AD6D0035D87E /* HomeViewController.swift in Sources */,
-				DFFA191E1D07F19F0035D87E /* PayBillsViewController.swift in Sources */,
 				DFFA18E71D06AD6D0035D87E /* AppDelegate.swift in Sources */,
 				DFFA192B1D097DC40035D87E /* PBCOMTabBarController.swift in Sources */,
 				DF48149F1D11486F0054189C /* Extension.swift in Sources */,
 				DFFA192D1D0981FA0035D87E /* AccountsViewController.swift in Sources */,
-				DFFA19271D08FF690035D87E /* MainTransactionViewController.swift in Sources */,
 				DF4814A61D1284B80054189C /* SecurityService.swift in Sources */,
-				DF48149B1D1104340054189C /* MenuViewController.swift in Sources */,
 				DFFA191C1D07D89F0035D87E /* BaseViewController.swift in Sources */,
-				DFFA19201D07F9260035D87E /* EnrolledBillersViewController.swift in Sources */,
+				DFFA19201D07F9260035D87E /* PaybillsViewController.swift in Sources */,
 				DFFA19291D0974150035D87E /* LoginViewController.swift in Sources */,
 				DFFA192F1D0A3B1A0035D87E /* Account.swift in Sources */,
 				DFFA19321D0A4CCB0035D87E /* Transaction.swift in Sources */,

@@ -30,4 +30,8 @@ class CustomColor: NSObject {
     func headerTableCellColor() -> UIColor {
         return UIColor(red: 239/255.0, green: 239/255.0, blue: 244/255.0, alpha: 1.0)
     }
+    
+    func selectedTabItemColor() -> UIColor {
+        return UIColor(red: 67/255.0, green: 67/255.0, blue: 67/255.0, alpha: 1.0)
+    }
 }

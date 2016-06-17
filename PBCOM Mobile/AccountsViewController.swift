@@ -161,18 +161,3 @@ extension AccountsViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-//MARK: - SlideNavigationControllerDelegate
-extension AccountsViewController: SlideNavigationControllerDelegate {
-    func slideNavigationControllerShouldDisplayLeftMenu() -> Bool {
-        return true
-    }
-    
-    func setUpMenuSlideView() {
-        SlideNavigationController.sharedInstance().panGestureSideOffset        = 50
-        SlideNavigationController.sharedInstance().enableShadow                = true
-        SlideNavigationController.sharedInstance().portraitSlideOffset         = 60
-        SlideNavigationController.sharedInstance().landscapeSlideOffset        = 60
-        SlideNavigationController.sharedInstance().menuRevealAnimationDuration = 0.19
-    }
-}
-

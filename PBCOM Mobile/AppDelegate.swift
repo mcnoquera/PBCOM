@@ -12,16 +12,42 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let cColor = CustomColor()
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let menuView: MenuViewController  = mainStoryboard.instantiateViewControllerWithIdentifier("MenuViewController") as! MenuViewController
         
-        SlideNavigationController.sharedInstance().leftMenu = menuView
-        SlideNavigationController.sharedInstance().menuRevealAnimationDuration = 0.18
+        /*
+        * Setup UITabBarController
+        **/
+        
+        let tabBarController = self.window!.rootViewController as! UITabBarController
+        var imageArray = ["Account","Payment","Transaction", "More"]
+        let tabItems   = tabBarController.tabBar.items!
+        for (index, _) in imageArray.enumerate() {
+    
+            let unselectedItem: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+            let selectedItem: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+            tabItems[index].image = UIImage(named: imageArray[index])?.imageWithRenderingMode(.AlwaysOriginal)
+            
+            tabItems[index].setTitleTextAttributes(unselectedItem as? [String : AnyObject], forState: .Normal)
+            tabItems[index].setTitleTextAttributes(selectedItem as? [String : AnyObject], forState: .Selected)
+            
+            tabItems[index].selectedImage = UIImage(named: imageArray[index])?.imageWithRenderingMode(.AlwaysOriginal)
+        }
+        
+        let numberOfItems = CGFloat(tabBarController.tabBar.items!.count)
+        let tabBarItemSize = CGSize(width: tabBarController.tabBar.frame.width / numberOfItems, height: tabBarController.tabBar.frame.height)
+        tabBarController.tabBar.selectionIndicatorImage = UIImage.imageWithColor(cColor.selectedTabItemColor(), size: tabBarItemSize).resizableImageWithCapInsets(UIEdgeInsetsZero)
+        
+        tabBarController.tabBar.frame.size.width = (self.window?.rootViewController?.view.frame.width)! + 4
+        tabBarController.tabBar.frame.origin.x = -2
+        
+        tabBarController.tabBar.translucent = false
+        tabBarController.selectedIndex = 0
+        tabBarController.tabBar.clipsToBounds = true
         
         return true
     }

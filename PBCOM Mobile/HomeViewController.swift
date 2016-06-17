@@ -57,7 +57,6 @@ class HomeViewController: BaseViewController {
     func dismissHomeScreen() {
         setBarStatus(.LightContent)
         self.dismissViewControllerAnimated(true, completion: nil)
-        
     }
     
     

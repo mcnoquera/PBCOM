@@ -1,5 +1,5 @@
 //
-//  EnrolledBIllersViewController.swift
+//  PaybillsViewController.swift
 //  PBCOM Mobile
 //
 //  Created by Mark Angelo Noquera on 6/8/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EnrolledBillersViewController: BaseTableViewController {
+class PaybillsViewController: BaseTableViewController {
     
     let merchants = ["Meralco", "Manila Water", "Globe", "PLDT"]
     let accounts = ["SAVINGS-XXXX-0001", "SAVINGS-XXXX-0002", "CHECKING-XXXX-0001", "LOAN-XXXX-12343", "LOAN-XXXX-12223"]
