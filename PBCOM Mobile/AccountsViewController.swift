@@ -8,55 +8,32 @@
 
 import UIKit
 
-class AccountsViewController: UIViewController {
+class AccountsViewController: BaseViewController {
     
     let sectionHeader = ["Savings and Checking Account", "Personal Loan Account", "Credit Card"]
     var savingsAndCheckingAccounts: [Account] = []
     var personalLoanAccounts: [Account] = []
     var creditCardAccounts: [Account] = []
     
+    @IBOutlet weak var accountTableView: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //self.automaticallyAdjustsScrollViewInsets = false
+        self.setBarStatus(.LightContent)
+        
         setUpStaticSavingsandCheckingAccounts()
         setUpStaticPersonalLoanAccounts()
         setUpStaticCreditCardAccounts()
+        accountTableView.tableFooterView = UIView(frame: CGRectZero)
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.translucent = false
-        self.navigationController?.navigationBar.barTintColor = UIColor(red:244/255.0, green: 128/255.0, blue: 80/255.0, alpha: 1.0)
-        self.navigationController?.navigationBar.hideBottomHairline()
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBold", size: 20)!, NSForegroundColorAttributeName: UIColor.whiteColor()]
-        self.navigationItem.title = "Accounts"
+        self.customNavigationTitleView(cColor.redFade(), title: "Accounts", isHideNavLine: true, isTranslucent: false, navTextColor: UIColor.whiteColor())
         signOutButton()
-    }
-    
-    func signOutButton() {
-        self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .Plain, target: self, action: #selector(AccountsViewController.alertLogout))
-    }
-    
-    func alertLogout() {
-        let alertController = UIAlertController(title: "PBCOM Mobile",
-                                                message: "Are you sure you want to Logout?",
-                                                preferredStyle: .Alert)
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
-        alertController.addAction(cancelAction)
-        
-        let openAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-            self.dismissViewController()
-        }
-        alertController.addAction(openAction)
-        self.presentViewController(alertController, animated: true, completion: nil)
-    }
-    
-    func dismissViewController() {
-        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func setUpStaticSavingsandCheckingAccounts() {

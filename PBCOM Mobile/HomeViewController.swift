@@ -11,8 +11,12 @@ import UIKit
 class HomeViewController: BaseViewController {
     
     @IBOutlet weak var loginButton: UIView!
+    @IBOutlet weak var loginImage: UIImageView!
+    
     @IBOutlet weak var pageControl: UIPageControl!
+    
     @IBOutlet weak var imageCarousel: iCarousel!
+    
     var valid = false
     var timer: NSTimer!
     
@@ -21,15 +25,18 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        addNavigationItemTitleView()
+        
+        setBarStatus(.Default)
         setUpCarousel()
         pageControl.currentPage = 0
         
+        /*
+         UI Gestures Recognize for Menu Buttons
+         */
         let loginGesture = UITapGestureRecognizer(target: self, action: #selector(HomeViewController.openLoginScreen(_:)))
         self.loginButton.addGestureRecognizer(loginGesture)
         
     }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -39,9 +46,10 @@ class HomeViewController: BaseViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        self.navigationController?.navigationBar.barTintColor = UIColor(red:255/255.0, green: 255/255.0, blue: 255/255.0, alpha: 1.0)
-        self.navigationController?.navigationBar.hideBottomHairline()
+        loginImage.image = UIImage(named: "LoginIcon")
+        self.defaultNavigationTitleView(UIColor.whiteColor(), isHideNavLine: true, isTranslucent: false)
         self.startTimer()
+        
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -52,6 +60,7 @@ class HomeViewController: BaseViewController {
     
     //MARK: Button Actions
     func openLoginScreen(sender:UITapGestureRecognizer) {
+        loginImage.image = UIImage(named: "LoginSelectedIcon")
         let loginVC = storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
         self.presentViewController(loginVC, animated: true, completion: nil)
     }
@@ -128,7 +137,6 @@ extension HomeViewController: iCarouselDataSource, iCarouselDelegate {
     
 }
 
-//MARK: - UITableViewDelegate & UITableViewDataSource
 
 
 

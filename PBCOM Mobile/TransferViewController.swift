@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TransferViewController: UITableViewController {
+class TransferViewController: BaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +22,7 @@ class TransferViewController: UITableViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBold", size: 20)!]
-        self.navigationItem.title = "Transfer"
+        customNavigationTitleView(cColor.redFade(), title: "Transfer", isHideNavLine: true, isTranslucent: false, navTextColor: UIColor.whiteColor())
     }
     
     

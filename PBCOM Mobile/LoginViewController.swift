@@ -9,43 +9,86 @@
 import UIKit
 import LocalAuthentication
 
-class LoginViewController: UIViewController {
-    
+class LoginViewController: BaseViewController {
     
     @IBOutlet weak var textFieldUserID : (UITextField)!
     @IBOutlet weak var textFieldPassword: (UITextField)!
+    @IBOutlet weak var closeLogin: (UIButton)!
     
+    
+    
+//    weak var activeTextField: UITextField?
+//    var kPreferredTextFieldToKeyboardOffset: CGFloat = 20.0
+//    var keyboardFrame: CGRect = CGRect.null
+//    var keyboardIsShowing: Bool = false
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-//        let navigationImage = UIImageView(frame: CGRectMake(0, 0, 140, 40))
-//        navigationImage.image = UIImage(named: "CompanyLogo")
-//        let workaroundImageView = UIImageView(frame: CGRectMake(0, 0, 140, 40))
-//        workaroundImageView.addSubview(navigationImage)
-//        self.navigationItem.titleView = workaroundImageView
         
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
+//        
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)
+//        
         
         textFieldUserID.layer.cornerRadius = 5
         textFieldUserID.layer.borderWidth = 2
         textFieldPassword.layer.cornerRadius = 5
         textFieldPassword.layer.borderWidth = 2
         
-        
-        textFieldPassword.layer.borderColor = UIColor(red: 233/255.0, green: 233/255.0, blue: 233/255.0, alpha: 1).CGColor
-        textFieldUserID.layer.borderColor = UIColor(red: 233/255.0, green: 233/255.0, blue: 233/255.0, alpha: 1).CGColor
-        
+        textFieldPassword.layer.borderColor = cColor.borderColortextField().CGColor
+        textFieldUserID.layer.borderColor = cColor.borderColortextField().CGColor
+
+    
         let tap = UITapGestureRecognizer.init(target: self, action: #selector(resignKeyboard))
         self.view.addGestureRecognizer(tap)
         
     }
     
-    func resignKeyboard ()  {
+    
+    func keyboardWillShow(notification:NSNotification) {
         
+        
+    }
+    
+    func keyboardWillHide(notification:NSNotification) {
+        
+      
+        
+    }
+    
+//    func adjustingHeight(show:Bool, notification:NSNotification)
+//    {
+//        var userInfo = notification.userInfo!
+//        let keyboardFrame:CGRect = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+//        let animationDuration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSTimeInterval
+//        let changeInHeight = (CGRectGetHeight(keyboardFrame) + 40) * (show ? 1 : -1)
+//        
+//        
+//        if keyboardFrame.origin.y >= UIScreen.mainScreen().bounds.size.height {
+//            scro
+//        } else {
+//            self.keyboardHeightLayoutConstraint?.constant = endFrame?.size.height ?? 0.0
+//        }
+//        UIView.animateWithDuration(duration,
+//                                   delay: NSTimeInterval(0),
+//                                   options: animationCurve,
+//                                   animations: { self.view.layoutIfNeeded() },
+//                                   completion: nil)
+//
+//    }
+    
+//    override func viewWillDisappear(animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        NSNotificationCenter.defaultCenter().removeObserver(self)
+//    }
+//    
+    
+    
+    func resignKeyboard ()  {
         textFieldUserID.resignFirstResponder()
         textFieldPassword.resignFirstResponder()
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,7 +102,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func backToMainMenu(sender: UIButton) {
-        
+        resignKeyboard()
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -181,19 +224,43 @@ class LoginViewController: UIViewController {
     
 }
 
+//MARK: - UIScrollViewDelegate
+extension LoginViewController: UIScrollViewDelegate {
+    
+}
+
+
+//MARK: - UITextFieldDelegate
 extension LoginViewController: UITextFieldDelegate {
     
-    func textFieldDidEndEditing(textField: UITextField) {
- 
-        textField.resignFirstResponder()
+    func textFieldDidBeginEditing(textField: UITextField) {
+//        self.view.frame.origin.y -= 60
+        animateViewMoving(true, moveValue: 60)
+        closeLogin.hidden = true
+    }
     
+    func textFieldDidEndEditing(textField: UITextField) {
+        
+//        self.view.frame.origin.y += 60
+        animateViewMoving(false, moveValue: 60)
+        textField.resignFirstResponder()
+        closeLogin.hidden = false
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        
         textField.resignFirstResponder()
         return true
-        
     }
+    
+    func animateViewMoving (up:Bool, moveValue :CGFloat){
+        let movementDuration:NSTimeInterval = 0.3
+        let movement:CGFloat = ( up ? -moveValue : moveValue)
+        UIView.beginAnimations( "animateView", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(movementDuration )
+        self.view.frame = CGRectOffset(self.view.frame, 0,  movement)
+        UIView.commitAnimations()
+    }
+
     
 }

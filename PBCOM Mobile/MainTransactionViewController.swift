@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainTransactionViewController: UITableViewController {
+class MainTransactionViewController: BaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,37 +23,10 @@ class MainTransactionViewController: UITableViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.translucent = false
-        self.navigationController?.navigationBar.barTintColor = UIColor(red:244/255.0, green: 128/255.0, blue: 80/255.0, alpha: 1.0)
-        self.navigationController?.navigationBar.hideBottomHairline()
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBold", size: 20)!, NSForegroundColorAttributeName: UIColor.whiteColor()]
-        self.navigationItem.title = "Transactions"
+        customNavigationTitleView(cColor.redFade(), title: "Transactions", isHideNavLine: true, isTranslucent: false, navTextColor: UIColor.whiteColor())
         signOutButton()
     }
     
-    func signOutButton() {
-        self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .Plain, target: self, action: #selector(MainTransactionViewController.alertLogout))
-    }
-    
-    func alertLogout() {
-        let alertController = UIAlertController(title: "PBCOM Mobile",
-                                                message: "Are you sure you want to Logout?",
-                                                preferredStyle: .Alert)
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
-        alertController.addAction(cancelAction)
-        
-        let openAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-            self.dismissViewController()
-        }
-        alertController.addAction(openAction)
-        self.presentViewController(alertController, animated: true, completion: nil)
-    }
-    
-    func dismissViewController() {
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
     
     //MARK: UITableViewControllerDelegate and UITableViewControllerDataSource
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
