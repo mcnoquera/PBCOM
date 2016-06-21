@@ -106,8 +106,6 @@ extension AccountsViewController: UITableViewDelegate, UITableViewDataSource {
         return view
     }
     
-    
-    
    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {

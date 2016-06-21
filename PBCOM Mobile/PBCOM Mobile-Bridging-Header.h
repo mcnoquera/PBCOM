@@ -3,11 +3,8 @@
 //
 
 #import <iCarousel/iCarousel.h>
-#import <iOS-Slide-Menu/SlideNavigationController.h>
-#import <iOS-Slide-Menu/SlideNavigationContorllerAnimator.h>
-#import <iOS-Slide-Menu/SlideNavigationContorllerAnimatorSlide.h>
-#import <iOS-Slide-Menu/SlideNavigationContorllerAnimatorScaleAndFade.h>
-#import <iOS-Slide-Menu/SlideNavigationContorllerAnimatorSlideAndFade.h>
 #import <GZIP/GZIP.h>
 #import <JGProgressHUD/JGProgressHUD.h>
 #import <AFNetworking/AFNetworking.h>
+#import <JVFloatLabeledTextField.h>
+#import <JVFloatLabeledTextView.h>

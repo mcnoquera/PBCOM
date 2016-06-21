@@ -192,6 +192,7 @@ class BaseTableViewController: UITableViewController {
     
     //MARK: Keyboard Accessory Methods
     func dismissKeyboard() {
+        
         tfDefault.resignFirstResponder()
     }
     

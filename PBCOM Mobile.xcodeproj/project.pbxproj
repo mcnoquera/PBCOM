@@ -14,6 +14,9 @@
 		DF4814A11D122EA80054189C /* CustomTemplate.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF4814A01D122EA80054189C /* CustomTemplate.xib */; };
 		DF4814A41D1281ED0054189C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4814A31D1281ED0054189C /* NetworkService.swift */; };
 		DF4814A61D1284B80054189C /* SecurityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4814A51D1284B80054189C /* SecurityService.swift */; };
+		DF4814AE1D17B4600054189C /* JVFloatLabeledTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4814A91D17B4600054189C /* JVFloatLabeledTextField.m */; };
+		DF4814AF1D17B4600054189C /* JVFloatLabeledTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4814AB1D17B4600054189C /* JVFloatLabeledTextView.m */; };
+		DF4814B01D17B4600054189C /* NSString+TextDirectionality.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4814AD1D17B4600054189C /* NSString+TextDirectionality.m */; };
 		DFFA18E71D06AD6D0035D87E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA18E61D06AD6D0035D87E /* AppDelegate.swift */; };
 		DFFA18E91D06AD6D0035D87E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFA18E81D06AD6D0035D87E /* HomeViewController.swift */; };
 		DFFA18EC1D06AD6D0035D87E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFFA18EA1D06AD6D0035D87E /* Main.storyboard */; };
@@ -68,6 +71,12 @@
 		DF4814A01D122EA80054189C /* CustomTemplate.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTemplate.xib; sourceTree = "<group>"; };
 		DF4814A31D1281ED0054189C /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		DF4814A51D1284B80054189C /* SecurityService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityService.swift; sourceTree = "<group>"; };
+		DF4814A81D17B4600054189C /* JVFloatLabeledTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVFloatLabeledTextField.h; sourceTree = "<group>"; };
+		DF4814A91D17B4600054189C /* JVFloatLabeledTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVFloatLabeledTextField.m; sourceTree = "<group>"; };
+		DF4814AA1D17B4600054189C /* JVFloatLabeledTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVFloatLabeledTextView.h; sourceTree = "<group>"; };
+		DF4814AB1D17B4600054189C /* JVFloatLabeledTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVFloatLabeledTextView.m; sourceTree = "<group>"; };
+		DF4814AC1D17B4600054189C /* NSString+TextDirectionality.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TextDirectionality.h"; sourceTree = "<group>"; };
+		DF4814AD1D17B4600054189C /* NSString+TextDirectionality.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TextDirectionality.m"; sourceTree = "<group>"; };
 		DFFA18E31D06AD6D0035D87E /* PBCOM Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PBCOM Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFFA18E61D06AD6D0035D87E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFFA18E81D06AD6D0035D87E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +169,19 @@
 			name = Service;
 			sourceTree = "<group>";
 		};
+		DF4814A71D17B3C20054189C /* JVFLoatLabeledTextField */ = {
+			isa = PBXGroup;
+			children = (
+				DF4814A81D17B4600054189C /* JVFloatLabeledTextField.h */,
+				DF4814A91D17B4600054189C /* JVFloatLabeledTextField.m */,
+				DF4814AA1D17B4600054189C /* JVFloatLabeledTextView.h */,
+				DF4814AB1D17B4600054189C /* JVFloatLabeledTextView.m */,
+				DF4814AC1D17B4600054189C /* NSString+TextDirectionality.h */,
+				DF4814AD1D17B4600054189C /* NSString+TextDirectionality.m */,
+			);
+			name = JVFLoatLabeledTextField;
+			sourceTree = "<group>";
+		};
 		DFFA18DA1D06AD6D0035D87E = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +263,7 @@
 		DFFA19331D0E48700035D87E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				DF4814A71D17B3C20054189C /* JVFLoatLabeledTextField */,
 				DFFA18ED1D06AD6D0035D87E /* Assets.xcassets */,
 				DFFA18F21D06AD6D0035D87E /* Info.plist */,
 				DFFA19231D0810120035D87E /* PBCOM Mobile-Bridging-Header.h */,
@@ -543,12 +566,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF4814AE1D17B4600054189C /* JVFloatLabeledTextField.m in Sources */,
 				DFFA19371D0E4EF90035D87E /* BaseTableViewController.swift in Sources */,
 				DFFA191A1D07D87A0035D87E /* TransactionViewController.swift in Sources */,
+				DF4814AF1D17B4600054189C /* JVFloatLabeledTextView.m in Sources */,
 				DF4814A41D1281ED0054189C /* NetworkService.swift in Sources */,
 				DFFA19221D07FC770035D87E /* TransferViewController.swift in Sources */,
 				DFFA19351D0E48D20035D87E /* CustomColor.swift in Sources */,
 				A879C0AA1D0A9A6B00478C11 /* MoreTableViewController.swift in Sources */,
+				DF4814B01D17B4600054189C /* NSString+TextDirectionality.m in Sources */,
 				DFFA18E91D06AD6D0035D87E /* HomeViewController.swift in Sources */,
 				DFFA18E71D06AD6D0035D87E /* AppDelegate.swift in Sources */,
 				DFFA192B1D097DC40035D87E /* PBCOMTabBarController.swift in Sources */,

@@ -66,9 +66,8 @@ extension UIDevice {
     }
 }
 
-
+//MARK: - UIImage
 extension UIImage {
-    
     class func imageWithColor(color: UIColor, size: CGSize) -> UIImage {
         let rect: CGRect = CGRectMake(0, 0, size.width, size.height)
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
@@ -78,5 +77,4 @@ extension UIImage {
         UIGraphicsEndImageContext()
         return image
     }
-    
 }

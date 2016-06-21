@@ -24,9 +24,11 @@ enum FONT: String {
 class BaseViewController: UIViewController {
     
     let cColor = CustomColor()
+    var showKeyboard: Bool!
     
     //Accessory View Instance
     var tfDefault: UITextField!
+    var textPicker: UITextField!
     
     //Picker View Instance
     let standardPickerY = 200 as CGFloat
@@ -36,7 +38,8 @@ class BaseViewController: UIViewController {
     var cancelButton: UIButton!
     var pickerView: UIPickerView!
     var pickerContentArray = []
-    var buttonPicker: UIButton!
+   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -151,51 +154,18 @@ class BaseViewController: UIViewController {
     }
     
     //MARK: Custom Picker View
-    func showCustomPickerView(contentArray: [String], button: UIButton) {
-        self.buttonPicker = button
+    func customPickerView(contentArray: [String], textField: UITextField) {
         self.pickerContentArray = contentArray
-        self.backgroundView = UIView(frame: self.view.bounds)
-        self.backgroundView.backgroundColor = UIColor.blackColor()
-        self.backgroundView.alpha           = 0
+        self.textPicker = textField
         
-        self.customPickerView = NSBundle.mainBundle().loadNibNamed("CustomPicker", owner: self, options: nil)[0] as! UIView
-        self.customPickerView.frame = CGRectMake(view.frame.origin.x, view.frame.height, view.frame.width, standardPickerY)
-        
-        self.okButton = self.customPickerView.viewWithTag(1) as! UIButton
-        self.cancelButton = self.customPickerView.viewWithTag(2) as! UIButton
-        self.pickerView = self.customPickerView.viewWithTag(3) as! UIPickerView
-        self.pickerView.delegate = self
-        toogleViewContent(true)
-        
-        self.okButton.addTarget(self, action: #selector(self.tooglePickerView(_:)), forControlEvents: .TouchUpInside)
-        self.cancelButton.addTarget(self, action: #selector(self.tooglePickerView(_:)), forControlEvents: .TouchUpInside)
-    }
-    
-    func tooglePickerView(sender: UIButton) {
-        sender.tag == 1 ? toogleViewContent(true) : toogleViewContent(false)
-    }
-    
-    func toogleViewContent(tag: Bool) {
-        if tag == true {
-            self.view.addSubview(self.backgroundView)
-            self.view.addSubview(self.customPickerView)
-            self.view.bringSubviewToFront(self.customPickerView)
-            
-            UIView.animateWithDuration(0.3, animations: { () -> Void in
-                self.backgroundView.alpha = 0.5
-                self.customPickerView.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.height - self.customPickerView.frame.height,
-                    self.view.frame.width, self.customPickerView.frame.height)
-            })
-        } else {
-            UIView.animateWithDuration(0.3, animations: { () -> Void in
-                self.backgroundView.alpha = 0
-                self.customPickerView.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.height,
-                    self.view.frame.width, self.standardPickerY)
-                }, completion: { (Bool) -> Void in
-                    self.customPickerView.removeFromSuperview()
-                    self.backgroundView.removeFromSuperview()
-            })
-        }
+        let inputAccessoryView: UIView = UIView(frame: CGRectMake(0, 0, self.view.frame.width, 210))
+        inputAccessoryView.backgroundColor = UIColor.groupTableViewBackgroundColor()
+        let picker = UIPickerView(frame: CGRectMake(0, 20, 0, 0))
+        picker.delegate = self
+        inputAccessoryView.addSubview(picker)
+        inputAccessoryView.addSubview(accessoryDoneClearButton()[0])
+        inputAccessoryView.addSubview(accessoryDoneClearButton()[1])
+        textField.inputView = inputAccessoryView
     }
     
     //MARK: Custom Text Field
@@ -206,9 +176,27 @@ class BaseViewController: UIViewController {
     //MARK: Accessory View
     func customAccessoryView(textField: UITextField) {
         self.tfDefault = textField
+        
         let inputAccessoryView: UIView = UIView(frame: CGRectMake(0, 0, 100, 40))
         inputAccessoryView.backgroundColor = UIColor.groupTableViewBackgroundColor()
-        
+        inputAccessoryView.addSubview(accessoryDoneClearButton()[0])
+        inputAccessoryView.addSubview(accessoryDoneClearButton()[1])
+        textField.inputAccessoryView = inputAccessoryView
+    }
+
+    func dismissKeyboard() {
+        tfDefault.resignFirstResponder()
+        textPicker.resignFirstResponder()
+    }
+    
+    func clearText() {
+        tfDefault.text = ""
+        textPicker.text = ""
+    }
+    
+    //MARK: Accessory Buttons
+    func accessoryDoneClearButton() -> [UIButton] {
+        var buttons = [UIButton]()
         /*
          * Add Done Button
          **/
@@ -218,8 +206,6 @@ class BaseViewController: UIViewController {
         doneButton.setTitleColor(cColor.redFade(), forState: UIControlState.Normal)
         doneButton.setTitleColor(UIColor.whiteColor(), forState: .Highlighted)
         doneButton.addTarget(self, action: #selector(self.dismissKeyboard), forControlEvents: .TouchUpInside)
-        inputAccessoryView.addSubview(doneButton)
-        
         /*
          * Add Clear Button
          **/
@@ -229,17 +215,12 @@ class BaseViewController: UIViewController {
         clearButton.setTitleColor(UIColor.darkGrayColor(), forState: UIControlState.Normal)
         clearButton.setTitleColor(UIColor.whiteColor(), forState: .Highlighted)
         clearButton.addTarget(self, action: #selector(self.clearText), forControlEvents: .TouchUpInside)
-        inputAccessoryView.addSubview(clearButton)
         
-        textField.inputAccessoryView = inputAccessoryView
-    }
-
-    func dismissKeyboard() {
-        tfDefault.resignFirstResponder()
-    }
-    
-    func clearText() {
-        tfDefault.text = ""
+        buttons.append(doneButton)
+        buttons.append(clearButton)
+        
+        return buttons
+        
     }
 }
 
@@ -247,6 +228,10 @@ class BaseViewController: UIViewController {
 extension BaseViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(textField: UITextField) {
         textField.resignFirstResponder()
+    }
+    
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        return true
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -267,7 +252,9 @@ extension BaseViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.buttonPicker.setTitle(pickerContentArray[row] as? String, forState: .Normal)
+        UIView.animateWithDuration(0.2) { 
+            self.textPicker.text = self.pickerContentArray[row] as? String
+        }
     }
     
     func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
